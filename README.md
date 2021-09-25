@@ -2,9 +2,7 @@
 This site is built with [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/)
 
 
-## Getting Started
-
-First, run the development server:
+## Run this site locally
 
 ```bash
 npm run dev
