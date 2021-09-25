@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Logo from "../components/Logo.js";
+import Logo from "../components/logo.js";
 import stars from "../styles/stars.module.scss";
 import styles from "../styles/home.module.css";
 //import Navbar from "../components/navbar.js";
