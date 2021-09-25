@@ -1,0 +1,51 @@
+.kasper {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  stroke: #ffffff;
+  animation: draw 2.2s linear forwards, fillKasper ease-in 2s forwards;
+}
+
+.luna {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  stroke: #ffffff;
+  fill: none;
+  animation: draw 2.2s linear forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillKasper {
+  0% {
+    fill: #3c3b52;
+  }
+  50% {
+    fill: #3c3b52;
+  }
+  100% {
+    fill: white;
+  }
+}
+
+@keyframes fillLuna {
+  0% {
+    fill: #282537;
+  }
+  50% {
+    fill: #282537;
+  }
+  100% {
+    fill: black;
+  }
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+}
