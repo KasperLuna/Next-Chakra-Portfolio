@@ -1,8 +1,9 @@
 .container {
   height: 100vh;
   text-align: center;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
   scroll-padding: 0;
+  scroll-snap-type: y mandatory;
   overflow-y: scroll;
   justify-content: center;
   align-items: center;
@@ -32,7 +33,7 @@
   );
 }
 
-.mainchild {
+.child {
   height: 100%;
   scroll-snap-align: center;
   display: flex;

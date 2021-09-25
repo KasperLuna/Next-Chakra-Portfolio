@@ -28,7 +28,6 @@ export default function Home() {
 
       <div className={styles.container}>
         {/* <Navbar className={styles.navbar} /> */}
-        {/* <main className={styles.main}> */}
         <div className={styles.starsdiv}>
           <div className={stars.stars}>
             <div className={stars.small}></div>
@@ -36,7 +35,7 @@ export default function Home() {
             <div className={stars.big}></div>
           </div>
         </div>
-        <section className={styles.mainchild}>
+        <section className={styles.child}>
           <div className={styles.hero}>
             <Logo w={[350, 400, 750]} />
             <ScaleFade in={true}>
@@ -99,22 +98,21 @@ export default function Home() {
             </Grid>
           </div>
         </section>
-        <section className={styles.mainchild}>
+        <section className={styles.child}>
           <div className={styles.glass}>
             <Heading className={styles.header}>Hi, I&apos;m Kasper</Heading>
           </div>
         </section>
-        <section className={styles.mainchild}>
+        <section className={styles.child}>
           <div className={styles.glass}>
             <Heading className={styles.header}>My Projects</Heading>
           </div>
         </section>
-        <section className={styles.mainchild}>
+        <section className={styles.child}>
           <div className={styles.glass}>
             <Heading className={styles.header}>Contact Me</Heading>
           </div>
         </section>
-        {/* </main> */}
       </div>
     </>
   );
