@@ -1,12 +1,10 @@
 .container {
-  height: 100vh;
-  text-align: center;
-  scroll-snap-type: mandatory;
-  scroll-padding: 0;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  justify-content: center;
-  align-items: center;
+  height: -webkit-fill-available;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+
   background-image: -webkit-radial-gradient(
     top,
     circle farthest-corner,
@@ -34,11 +32,14 @@
 }
 
 .child {
-  height: 100%;
-  scroll-snap-align: center;
+  height: -webkit-fill-available;
+  height: 100vh;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
+  scroll-snap-align: start;
   align-items: center;
+  position: relative;
 }
 
 .starsdiv {
@@ -52,7 +53,7 @@
 }
 
 .hero button {
-  margin-top: 25px;
+  margin: 20px;
 }
 
 .description {
@@ -87,8 +88,7 @@
 }
 
 .logo {
-  height: 1em;
-  margin-left: 0.5rem;
+  display: flex;
 }
 
 .glass {

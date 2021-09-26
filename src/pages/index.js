@@ -11,7 +11,7 @@ import {
   IconButton,
   Tooltip,
 } from "@chakra-ui/react";
-import { TriangleDownIcon } from "@chakra-ui/icons";
+import { ArrowRightIcon } from "@chakra-ui/icons";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 export default function Home() {
@@ -25,9 +25,8 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      {/* <Navbar className={styles.navbar} /> */}
       <div className={styles.container}>
-        {/* <Navbar className={styles.navbar} /> */}
         <div className={styles.starsdiv}>
           <div className={stars.stars}>
             <div className={stars.small}></div>
@@ -91,7 +90,7 @@ export default function Home() {
                 </Tooltip>
               </Grid>
               <Box>
-                <Button colorScheme="telegram" leftIcon={<TriangleDownIcon />}>
+                <Button colorScheme="telegram" rightIcon={<ArrowRightIcon />}>
                   More
                 </Button>
               </Box>
@@ -100,17 +99,17 @@ export default function Home() {
         </section>
         <section className={styles.child}>
           <div className={styles.glass}>
-            <Heading className={styles.header}>Hi, I&apos;m Kasper</Heading>
+            <Heading className={styles.header}>Hi, I'm Kasper.</Heading>
           </div>
         </section>
         <section className={styles.child}>
           <div className={styles.glass}>
-            <Heading className={styles.header}>My Projects</Heading>
+            <Heading className={styles.header}>Projects</Heading>
           </div>
         </section>
         <section className={styles.child}>
           <div className={styles.glass}>
-            <Heading className={styles.header}>Contact Me</Heading>
+            <Heading className={styles.header}>Contact me</Heading>
           </div>
         </section>
       </div>
