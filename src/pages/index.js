@@ -99,7 +99,7 @@ export default function Home() {
         </section>
         <section className={styles.child}>
           <div className={styles.glass}>
-            <Heading className={styles.header}>Hi, I'm Kasper.</Heading>
+            <Heading className={styles.header}>Hi, I&apos;m Kasper.</Heading>
           </div>
         </section>
         <section className={styles.child}>
