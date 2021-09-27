@@ -38,9 +38,9 @@ export default function SimpleCard() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": "contact",
-          name: name,
-          email: email,
-          message: message,
+          Name: name,
+          Email: email,
+          Message: message,
         }),
       })
         .then(() => setOpen(true))
@@ -79,7 +79,6 @@ export default function SimpleCard() {
                 <Input
                   onChange={(e) => setName(e.target.value)}
                   type="email"
-                  name="email"
                   placeholder="johndoe@gmail.com"
                   required
                 />
@@ -89,7 +88,6 @@ export default function SimpleCard() {
                 <Input
                   onChange={(e) => setEmail(e.target.value)}
                   type="text"
-                  name="name"
                   placeholder="John Doe"
                   required
                 />
@@ -99,7 +97,6 @@ export default function SimpleCard() {
                 <Textarea
                   onChange={(e) => setMessage(e.target.value)}
                   type="text"
-                  name="message"
                   placeholder="Good Work, Kasper!"
                   required
                 />
@@ -116,6 +113,11 @@ export default function SimpleCard() {
               </Button>
             </Stack>
           </Box>
+          <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <input type="text" name="Name" />
+            <input type="email" name="Email" />
+            <input type="text" name="Message" />
+          </form>
           {open ? (
             <Alert status="success">
               <AlertIcon />
