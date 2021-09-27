@@ -108,7 +108,13 @@ export default function SimpleCard() {
               </Button>
             </Stack>
           </Box>
-          <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+          <form
+            name="contact"
+            netlify
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            hidden
+          >
             <input type="text" name="Name" />
             <input type="email" name="Email" />
             <input type="text" name="Message" />
