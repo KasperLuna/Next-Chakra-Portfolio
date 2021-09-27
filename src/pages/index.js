@@ -3,7 +3,7 @@ import Navbar from "../components/navbar.js";
 import Hero from "../components/hero.js";
 import Features from "../components/features.js";
 import Pricing from "../components/pricing.js";
-import Testimonials from "../components/testimonials.js";
+import Contact from "../components/contact.js";
 import Footer from "../components/footer.js";
 
 import styles from "../styles/home.module.css";
@@ -23,7 +23,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Pricing />
-      {/* <Testimonials /> */}
+      <Contact />
       <Footer />
     </>
   );
