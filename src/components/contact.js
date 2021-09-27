@@ -61,12 +61,7 @@ export default function SimpleCard() {
             , but you can leave a message here too :)
           </Text>
         </Stack>
-        <form
-          onSubmit={handleSubmit}
-          name="contact"
-          method="POST"
-          data-netlify="true"
-        >
+        <form onSubmit={handleSubmit}>
           <Box
             rounded={"lg"}
             bg={useColorModeValue("white", "gray.700")}
