@@ -9,7 +9,7 @@
 .luna {
   stroke-dasharray: 800;
   stroke-dashoffset: 900;
-  stroke-width: 3px;
+  stroke-width: 2.5px;
   stroke: #000000;
   fill: none;
   animation: draw 2.2s linear forwards;
