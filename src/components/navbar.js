@@ -25,6 +25,7 @@ import Image from "next/image";
 import styles from "../styles/navbar.module.css";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Logo from "./navlogo";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -60,12 +61,13 @@ export default function WithSubnavigation() {
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Box width={"200px"}>
             <Link href={"https://kasperluna.com"}>
-              <Image
+              {/* <Image
                 src="/logo.svg"
                 alt="KasperLuna Logo"
                 width={150}
                 height={16}
-              />
+              /> */}
+              <Logo />
             </Link>
           </Box>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -82,7 +84,7 @@ export default function WithSubnavigation() {
           <Tooltip label="Connect with me on LinkedIn!" aria-label="A tooltip">
             <IconButton
               as={"a"}
-              colorScheme={"none"}
+              colorScheme={"gray"}
               href={"https://www.linkedin.com/in/kasper-luna-1281a114b"}
               target={"_blank"}
               icon={<FaLinkedin className={styles.socialicons} />}
@@ -91,7 +93,7 @@ export default function WithSubnavigation() {
           <Tooltip label="Check out my Github!" aria-label="A tooltip">
             <IconButton
               as={"a"}
-              colorScheme={"none"}
+              colorScheme={"gray"}
               href={"https://github.com/KasperLunaIICS"}
               target={"_blank"}
               icon={<FaGithub className={styles.socialicons} />}

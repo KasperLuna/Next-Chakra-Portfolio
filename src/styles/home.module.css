@@ -1,6 +1,6 @@
 .container {
   height: -webkit-fill-available;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: y mandatory;
   display: flex;
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
@@ -34,10 +34,9 @@
 .child {
   height: -webkit-fill-available;
   height: 100vh;
-  min-width: 100vw;
   display: flex;
   justify-content: center;
-  scroll-snap-align: start;
+  scroll-snap-align: initial;
   align-items: center;
   position: relative;
 }
