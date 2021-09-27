@@ -18,6 +18,12 @@ import {
 import { useState } from "react";
 import { AlertIcon } from "@chakra-ui/alert";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 export default function SimpleCard() {
   const [email, setEmail] = useState(null);
   const [name, setName] = useState(null);
