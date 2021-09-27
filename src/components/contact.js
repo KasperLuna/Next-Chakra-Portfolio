@@ -79,6 +79,7 @@ export default function SimpleCard() {
                 <Input
                   onChange={(e) => setName(e.target.value)}
                   type="email"
+                  name="email"
                   placeholder="johndoe@gmail.com"
                   required
                 />
@@ -88,6 +89,7 @@ export default function SimpleCard() {
                 <Input
                   onChange={(e) => setEmail(e.target.value)}
                   type="text"
+                  name="name"
                   placeholder="John Doe"
                   required
                 />
@@ -97,6 +99,7 @@ export default function SimpleCard() {
                 <Textarea
                   onChange={(e) => setMessage(e.target.value)}
                   type="text"
+                  name="message"
                   placeholder="Good Work, Kasper!"
                   required
                 />
