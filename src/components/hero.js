@@ -45,8 +45,8 @@ export default function CallToActionWithAnnotation() {
           <Box>
             <Button
               leftIcon={<ArrowDownIcon />}
-              colorScheme={"green"}
-              bg={"green.400"}
+              colorScheme={"blue"}
+              bg={"blue.400"}
               rounded={"full"}
               px={6}
               _hover={{
