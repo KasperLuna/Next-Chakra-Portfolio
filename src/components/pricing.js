@@ -1,8 +1,6 @@
-import { ReactNode } from "react";
 import {
   Box,
   Stack,
-  HStack,
   Heading,
   Text,
   VStack,
@@ -11,8 +9,11 @@ import {
   ListItem,
   ListIcon,
   Button,
+  IconButton,
+  Tooltip,
+  Image,
 } from "@chakra-ui/react";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaGithub } from "react-icons/fa";
 
 function PriceWrapper({ children }) {
   return (
@@ -34,12 +35,9 @@ export default function ThreeTierPricing() {
     <Box py={12}>
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">
-          Plans that fit your need
+          My Projects
         </Heading>
-        <Text fontSize="lg" color={"gray.500"}>
-          Start with 14-day free trial. No credit card needed. Cancel at
-          anytime.
-        </Text>
+        <Text fontSize="lg" color={"gray.500"}></Text>
       </VStack>
       <Stack
         direction={{ base: "column", md: "row" }}
@@ -51,115 +49,71 @@ export default function ThreeTierPricing() {
         <PriceWrapper>
           <Box py={4} px={12}>
             <Text fontWeight="500" fontSize="2xl">
-              Hobby
+              Createev
             </Text>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                $
-              </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                79
-              </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
-              </Text>
-            </HStack>
+            <Text fontSize={"md"}> e-Commerce Concept Site </Text>
+            <Image alt={"Createev"} src="/createev.png" objectFit={"cover"} />
           </Box>
           <VStack
             bg={useColorModeValue("gray.50", "gray.700")}
             py={4}
             borderBottomRadius={"xl"}
           >
-            <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
-              </ListItem>
-            </List>
-            <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
-                Start trial
-              </Button>
+            <Box w={60}>
+              <Text color={"gray.600"} fontSize={"md"}>
+                Developed backend processes for the Createev e-commerce concept
+                site. Utilizing Node.js, Express.js and a MySQL database to
+                serve templated pages for e-commerce.
+              </Text>
+            </Box>
+            <Box w="80%" pt={3}>
+              <Tooltip label="Browse the Github Repo" aria-label="A tooltip">
+                <IconButton
+                  as={"a"}
+                  colorScheme={"gray"}
+                  href={"https://www.linkedin.com/in/kasper-luna-1281a114b"}
+                  target={"_blank"}
+                  icon={<FaGithub w={8} h={8} />}
+                />
+              </Tooltip>
             </Box>
           </VStack>
         </PriceWrapper>
-
         <PriceWrapper>
           <Box position="relative">
-            <Box
-              position="absolute"
-              top="-16px"
-              left="50%"
-              style={{ transform: "translate(-50%)" }}
-            >
-              <Text
-                textTransform="uppercase"
-                bg={useColorModeValue("red.300", "red.700")}
-                px={3}
-                py={1}
-                color={useColorModeValue("gray.900", "gray.300")}
-                fontSize="sm"
-                fontWeight="600"
-                rounded="xl"
-              >
-                Most Popular
-              </Text>
-            </Box>
             <Box py={4} px={12}>
               <Text fontWeight="500" fontSize="2xl">
-                Growth
+                Dealcrafter
               </Text>
-              <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
-                  $
-                </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                  149
-                </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /month
-                </Text>
-              </HStack>
+              <Text fontSize={"md"}> Internal Inventory Management </Text>
+              <Image
+                alt={"Dealcrafter"}
+                src="/dealcrafter.png"
+                objectFit={"cover"}
+              />
             </Box>
             <VStack
               bg={useColorModeValue("gray.50", "gray.700")}
               py={4}
               borderBottomRadius={"xl"}
             >
-              <List spacing={3} textAlign="start" px={12}>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  unlimited build minutes
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-              </List>
-              <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="red">
-                  Start trial
-                </Button>
+              <Box w={60}>
+                <Text color={"gray.600"} fontSize={"md"}>
+                  Developed backend processes for the internal Dealcrafter site,
+                  utilizing Node.js, Express.js, PostgreSQL, and Redis to serve
+                  templated pages used for inventory management.
+                </Text>
+              </Box>
+              <Box w="80%" pt={3}>
+                <Tooltip label="Browse the Github Repo" aria-label="A tooltip">
+                  <IconButton
+                    as={"a"}
+                    colorScheme={"gray"}
+                    href={"https://www.linkedin.com/in/kasper-luna-1281a114b"}
+                    target={"_blank"}
+                    icon={<FaGithub w={8} h={8} />}
+                  />
+                </Tooltip>
               </Box>
             </VStack>
           </Box>
@@ -167,43 +121,33 @@ export default function ThreeTierPricing() {
         <PriceWrapper>
           <Box py={4} px={12}>
             <Text fontWeight="500" fontSize="2xl">
-              Scale
+              This Site
             </Text>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                $
-              </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                349
-              </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
-              </Text>
-            </HStack>
+            <Text fontSize={"md"}> Portfolio Site </Text>
+            <Image alt={"This Site"} src="/thissite.png" objectFit={"cover"} />
           </Box>
           <VStack
             bg={useColorModeValue("gray.50", "gray.700")}
             py={4}
             borderBottomRadius={"xl"}
           >
-            <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
-              </ListItem>
-            </List>
-            <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
-                Start trial
-              </Button>
+            <Box w={60}>
+              <Text color={"gray.600"} fontSize={"md"}>
+                An ongoing project currently using Chakra UI and Next.js to
+                develop React.js skills and other skills related to Frontend
+                development and integrating such with Node.js-based API&apos;s.
+              </Text>
+            </Box>
+            <Box w="80%" pt={3}>
+              <Tooltip label="Browse the Github Repo" aria-label="A tooltip">
+                <IconButton
+                  as={"a"}
+                  colorScheme={"gray"}
+                  href={"https://www.linkedin.com/in/kasper-luna-1281a114b"}
+                  target={"_blank"}
+                  icon={<FaGithub w={8} h={8} />}
+                />
+              </Tooltip>
             </Box>
           </VStack>
         </PriceWrapper>

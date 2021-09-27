@@ -23,7 +23,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Pricing />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </>
   );
