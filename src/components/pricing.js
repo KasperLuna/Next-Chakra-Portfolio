@@ -71,7 +71,7 @@ export default function ThreeTierPricing() {
                 <IconButton
                   as={"a"}
                   colorScheme={"gray"}
-                  href={"https://www.linkedin.com/in/kasper-luna-1281a114b"}
+                  href={"https://github.com/KasperLunaIICS/Createev-Concept"}
                   target={"_blank"}
                   icon={<FaGithub w={8} h={8} />}
                 />
@@ -109,7 +109,7 @@ export default function ThreeTierPricing() {
                   <IconButton
                     as={"a"}
                     colorScheme={"gray"}
-                    href={"https://www.linkedin.com/in/kasper-luna-1281a114b"}
+                    href={"https://github.com/KasperLunaIICS/Dealcrafter"}
                     target={"_blank"}
                     icon={<FaGithub w={8} h={8} />}
                   />
@@ -143,7 +143,9 @@ export default function ThreeTierPricing() {
                 <IconButton
                   as={"a"}
                   colorScheme={"gray"}
-                  href={"https://www.linkedin.com/in/kasper-luna-1281a114b"}
+                  href={
+                    "https://github.com/KasperLunaIICS/next-personal-chakra-website"
+                  }
                   target={"_blank"}
                   icon={<FaGithub w={8} h={8} />}
                 />
