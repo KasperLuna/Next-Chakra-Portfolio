@@ -38,9 +38,9 @@ export default function SimpleCard() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": "contact",
-          Name: name,
-          Email: email,
-          Message: message,
+          name: name,
+          email: email,
+          message: message,
         }),
       })
         .then(() => setOpen(true))
