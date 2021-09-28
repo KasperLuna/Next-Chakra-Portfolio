@@ -5,7 +5,11 @@ import { ArrowDownIcon } from "@chakra-ui/icons";
 import Kasper from "../logos/kasper.js";
 import Luna from "../logos/luna.js";
 
-export default function Hero() {
+export default function Hero(props) {
+  const scrollToAbout = () => {
+    props.scrollToAbout.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <Container maxW={"5xl"}>
@@ -45,6 +49,7 @@ export default function Hero() {
               _hover={{
                 bg: "green.500",
               }}
+              onClick={() => scrollToAbout()}
             >
               More
             </Button>

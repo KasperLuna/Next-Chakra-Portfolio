@@ -7,7 +7,13 @@ import Projects from "../components/projects.js";
 import Contact from "../components/contact.js";
 import Footer from "../components/footer.js";
 
+import { useRef } from "react";
+
 export default function Home() {
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
     <>
       <Head>
@@ -18,11 +24,24 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
+      <div style={{ position: "sticky" }}>
+        <Navbar
+          scrollToAbout={aboutRef}
+          scrollToProjects={projectsRef}
+          scrollToContact={contactRef}
+        />
+      </div>
+      <Hero scrollToAbout={aboutRef} />
+      <div ref={aboutRef}>
+        <About />
+      </div>
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
+
       <Footer />
     </>
   );
