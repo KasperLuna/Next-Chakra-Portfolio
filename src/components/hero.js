@@ -1,18 +1,11 @@
-import {
-  Box,
-  Container,
-  Text,
-  Button,
-  Stack,
-  Heading,
-  createIcon,
-} from "@chakra-ui/react";
+import { Box, Container, Text, Button, Stack, Heading } from "@chakra-ui/react";
 
+//Icons and Logo
 import { ArrowDownIcon } from "@chakra-ui/icons";
-import Kasper from "../components/kasper.js";
-import Luna from "../components/luna.js";
+import Kasper from "../logos/kasper.js";
+import Luna from "../logos/luna.js";
 
-export default function CallToActionWithAnnotation() {
+export default function Hero() {
   return (
     <>
       <Container maxW={"5xl"}>

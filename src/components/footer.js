@@ -2,15 +2,17 @@ import {
   Box,
   chakra,
   Container,
-  Link,
   Stack,
   Text,
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
+
+//Icon
 import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
 
-import Logo from "./navlogo";
+//Logo
+import Logo from "../logos/navlogo.js";
 
 const SocialButton = ({ children, label, href }) => {
   return (

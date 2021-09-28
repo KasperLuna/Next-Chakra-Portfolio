@@ -5,15 +5,15 @@ import {
   Text,
   VStack,
   useColorModeValue,
-  List,
-  ListItem,
-  ListIcon,
-  Button,
   IconButton,
   Tooltip,
   Image,
 } from "@chakra-ui/react";
-import { FaCheckCircle, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
+//Logos
+import Createev from "../logos/createev.js";
+import ThisSiteLogo from "../logos/thisSiteLogo.js";
 
 function PriceWrapper({ children }) {
   return (
@@ -30,7 +30,7 @@ function PriceWrapper({ children }) {
   );
 }
 
-export default function ThreeTierPricing() {
+export default function Projects() {
   return (
     <Box py={12}>
       <VStack spacing={2} textAlign="center">
@@ -52,7 +52,7 @@ export default function ThreeTierPricing() {
               Createev
             </Text>
             <Text fontSize={"md"}> e-Commerce Concept Site </Text>
-            <Image alt={"Createev"} src="/createev.png" objectFit={"cover"} />
+            <Createev />
           </Box>
           <VStack
             bg={useColorModeValue("gray.50", "gray.700")}
@@ -124,7 +124,7 @@ export default function ThreeTierPricing() {
               This Site
             </Text>
             <Text fontSize={"md"}> Portfolio Site </Text>
-            <Image alt={"This Site"} src="/thissite.png" objectFit={"cover"} />
+            <ThisSiteLogo />
           </Box>
           <VStack
             bg={useColorModeValue("gray.50", "gray.700")}

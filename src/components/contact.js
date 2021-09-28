@@ -110,7 +110,7 @@ export default function SimpleCard() {
           </Box>
           <form
             name="contact"
-            netlify
+            netlify="true"
             netlify-honeypot="bot-field"
             data-netlify="true"
             hidden

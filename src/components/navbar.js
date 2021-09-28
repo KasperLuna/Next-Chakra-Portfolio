@@ -14,18 +14,21 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+
+//Icons
 import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import Image from "next/image";
-
-import styles from "../styles/navbar.module.css";
-
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import Logo from "./navlogo";
+
+//Logo
+import Logo from "../logos/navlogo";
+
+//Styles
+import styles from "../styles/navbar.module.css";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -33,8 +36,6 @@ export default function WithSubnavigation() {
   return (
     <Box className={styles.nav}>
       <Flex
-        // bg={useColorModeValue("white", "gray.800")}
-        // color={useColorModeValue("gray.600", "white")}
         opacity={"none"}
         minH={"60px"}
         py={{ base: 2 }}
@@ -61,12 +62,6 @@ export default function WithSubnavigation() {
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Box width={"200px"}>
             <Link href={"https://kasperluna.com"}>
-              {/* <Image
-                src="/logo.svg"
-                alt="KasperLuna Logo"
-                width={150}
-                height={16}
-              /> */}
               <Logo />
             </Link>
           </Box>

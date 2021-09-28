@@ -1,12 +1,11 @@
+//Components
 import Head from "next/head";
 import Navbar from "../components/navbar.js";
 import Hero from "../components/hero.js";
-import Features from "../components/features.js";
-import Pricing from "../components/pricing.js";
+import About from "../components/about.js";
+import Projects from "../components/projects.js";
 import Contact from "../components/contact.js";
 import Footer from "../components/footer.js";
-
-import styles from "../styles/home.module.css";
 
 export default function Home() {
   return (
@@ -19,10 +18,10 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar className={styles.navbar} />
+      <Navbar />
       <Hero />
-      <Features />
-      <Pricing />
+      <About />
+      <Projects />
       <Contact />
       <Footer />
     </>
