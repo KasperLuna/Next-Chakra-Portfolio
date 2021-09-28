@@ -27,9 +27,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 //Logo
 import Logo from "../logos/navlogo";
 
-//Styles
-import styles from "../styles/navbar.module.css";
-
 export default function WithSubnavigation(props) {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -166,7 +163,7 @@ export default function WithSubnavigation(props) {
               colorScheme={"gray"}
               href={"https://www.linkedin.com/in/kasper-luna-1281a114b"}
               target={"_blank"}
-              icon={<FaLinkedin className={styles.socialicons} />}
+              icon={<FaLinkedin size={25} />}
             />
           </Tooltip>
           <Tooltip label="Check out my Github!" aria-label="A tooltip">
@@ -175,7 +172,7 @@ export default function WithSubnavigation(props) {
               colorScheme={"gray"}
               href={"https://github.com/KasperLunaIICS"}
               target={"_blank"}
-              icon={<FaGithub className={styles.socialicons} />}
+              icon={<FaGithub size={25} />}
             />
           </Tooltip>
         </Stack>

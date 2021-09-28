@@ -1,5 +1,3 @@
-import styles from "../styles/navbar.module.css";
-
 const Logo = ({ colormode }) => {
   return (
     <>
