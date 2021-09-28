@@ -37,17 +37,19 @@ export default function Projects() {
         <Heading as="h1" fontSize="4xl">
           My Projects
         </Heading>
-        <Text fontSize="lg" color={"gray.500"}></Text>
+        <Text fontSize="lg" color={"gray.500"}>
+          I&apos;ve worked on a few things, feel free to check my repositories!
+        </Text>
       </VStack>
       <Stack
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column", lg: "row" }}
         textAlign="center"
         justify="center"
-        spacing={{ base: 4, lg: 10 }}
+        spacing={{ base: 5, lg: 8 }}
         py={10}
       >
         <PriceWrapper>
-          <Box py={4} px={12}>
+          <Box py={4} px={7}>
             <Text fontWeight="500" fontSize="2xl">
               Createev
             </Text>
@@ -81,16 +83,18 @@ export default function Projects() {
         </PriceWrapper>
         <PriceWrapper>
           <Box position="relative">
-            <Box py={4} px={12}>
+            <Box py={4} px={7}>
               <Text fontWeight="500" fontSize="2xl">
                 Dealcrafter
               </Text>
               <Text fontSize={"md"}> Internal Inventory Management </Text>
-              <Image
-                alt={"Dealcrafter"}
-                src="/dealcrafter.png"
-                objectFit={"cover"}
-              />
+              <Box width="280px" height="280px">
+                <Image
+                  alt={"Dealcrafter"}
+                  src="/dealcrafter.png"
+                  objectFit={"contain"}
+                />
+              </Box>
             </Box>
             <VStack
               bg={useColorModeValue("gray.50", "gray.700")}
@@ -119,7 +123,7 @@ export default function Projects() {
           </Box>
         </PriceWrapper>
         <PriceWrapper>
-          <Box py={4} px={12}>
+          <Box py={4} px={7}>
             <Text fontWeight="500" fontSize="2xl">
               This Site
             </Text>

@@ -4,3 +4,19 @@
   width: 280px;
   height: 280px;
 }
+
+.sitelogo {
+  width: 280px;
+  height: 280px;
+  stroke-width: 4px;
+}
+
+.sitelogok {
+  stroke: #000000;
+  fill: #000000;
+}
+
+.sitelogol {
+  stroke: #000000;
+  fill: none;
+}
