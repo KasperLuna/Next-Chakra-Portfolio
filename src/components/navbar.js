@@ -94,7 +94,6 @@ export default function WithSubnavigation(props) {
   };
 
   const MobileNavItem = (props) => {
-    console.log(props);
     return (
       <Stack spacing={4}>
         <Flex
