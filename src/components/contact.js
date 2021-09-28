@@ -53,7 +53,7 @@ export default function SimpleCard() {
       <Stack spacing={8} mx={"auto"} maxW={"lg"} px={7}>
         <Stack textAlign={"center"} align={"center"}>
           <Heading fontSize={"4xl"}>Contact me!</Heading>
-          <Text fontSize={"lg"} color={"gray.600"}>
+          <Text fontSize={"lg"} color={"gray.500"}>
             You can always reach me at{" "}
             <Link href="mailto:luna.kasper.f@gmail.com" color={"blue.400"}>
               luna.kasper.f@gmail.com

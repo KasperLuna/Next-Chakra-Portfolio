@@ -62,7 +62,7 @@ export default function Projects(props) {
             borderBottomRadius={"xl"}
           >
             <Box w={60}>
-              <Text color={"gray.600"} fontSize={"md"}>
+              <Text color={"gray.500"} fontSize={"md"}>
                 Developed backend processes for the Createev e-commerce concept
                 site. Utilizing Node.js, Express.js and a MySQL database to
                 serve templated pages for e-commerce.
@@ -102,7 +102,7 @@ export default function Projects(props) {
               borderBottomRadius={"xl"}
             >
               <Box w={60}>
-                <Text color={"gray.600"} fontSize={"md"}>
+                <Text color={"gray.500"} fontSize={"md"}>
                   Developed backend processes for the internal Dealcrafter site,
                   utilizing Node.js, Express.js, PostgreSQL, and Redis to serve
                   templated pages used for inventory management.
@@ -136,7 +136,7 @@ export default function Projects(props) {
             borderBottomRadius={"xl"}
           >
             <Box w={60}>
-              <Text color={"gray.600"} fontSize={"md"}>
+              <Text color={"gray.500"} fontSize={"md"}>
                 An ongoing project currently using Chakra UI and Next.js to
                 develop React.js skills and other skills related to Frontend
                 development and integrating such with Node.js-based API&apos;s.

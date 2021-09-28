@@ -72,7 +72,7 @@ export default function SplitWithImage() {
               About Me
             </Text>
             <Heading>Hi, I&apos;m Kasper.</Heading>
-            <Text color={"gray.600"} fontSize={"lg"}>
+            <Text color={"gray.500"} fontSize={"lg"}>
               Student at the University of Santo Tomas currently in my last year
               of BS Information Systems, Specializing in Service Management.
               I&apos;m <b>looking for an Internship</b> starting{" "}
