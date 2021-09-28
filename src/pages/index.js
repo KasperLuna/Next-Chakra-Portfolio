@@ -38,8 +38,8 @@ export default function Home() {
         colormode={colorMode}
       />
       <Box
-        marginTop="2px"
-        marginRight="3px"
+        marginTop="10px"
+        marginRight="4px"
         sx={{
           position: "-webkit-sticky" /* Safari */,
           position: "sticky",
@@ -51,7 +51,9 @@ export default function Home() {
 
           <IconButton
             colorScheme={"gray"}
-            icon={colorMode === "light" ? <BsMoon /> : <BsSun />}
+            icon={
+              colorMode === "light" ? <BsMoon size={25} /> : <BsSun size={25} />
+            }
             onClick={toggleColorMode}
           />
         </Flex>
