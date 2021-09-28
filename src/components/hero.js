@@ -21,7 +21,7 @@ export default function Hero(props) {
         >
           <Box display={{ md: "flex" }}>
             <Box w="100%">
-              <Kasper />
+              <Kasper colormode={props.colormode} />
             </Box>
             <Box
               width={{
@@ -31,7 +31,7 @@ export default function Hero(props) {
                 xl: "80%", // 80em+
               }}
             >
-              <Luna />
+              <Luna colormode={props.colormode} />
             </Box>
           </Box>
           <Text>

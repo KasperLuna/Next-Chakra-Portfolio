@@ -7,9 +7,15 @@ import Projects from "../components/projects.js";
 import Contact from "../components/contact.js";
 import Footer from "../components/footer.js";
 
+import { Box, Flex, Spacer } from "@chakra-ui/layout";
+import { useColorMode } from "@chakra-ui/color-mode";
+import { IconButton } from "@chakra-ui/button";
+import { BsMoon, BsSun } from "react-icons/bs";
+
 import { useRef } from "react";
 
 export default function Home() {
+  const { colorMode, toggleColorMode } = useColorMode();
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
@@ -24,25 +30,45 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{ position: "sticky" }}>
-        <Navbar
-          scrollToAbout={aboutRef}
-          scrollToProjects={projectsRef}
-          scrollToContact={contactRef}
-        />
-      </div>
-      <Hero scrollToAbout={aboutRef} />
+
+      <Navbar
+        scrollToAbout={aboutRef}
+        scrollToProjects={projectsRef}
+        scrollToContact={contactRef}
+        colormode={colorMode}
+      />
+      <Box
+        marginTop="2px"
+        marginRight="3px"
+        sx={{
+          position: "-webkit-sticky" /* Safari */,
+          position: "sticky",
+          top: "1",
+        }}
+      >
+        <Flex>
+          <Spacer />
+
+          <IconButton
+            colorScheme={"gray"}
+            icon={colorMode === "light" ? <BsMoon /> : <BsSun />}
+            onClick={toggleColorMode}
+          />
+        </Flex>
+      </Box>
+      <Hero scrollToAbout={aboutRef} colormode={colorMode} />
+
       <div ref={aboutRef}>
         <About />
       </div>
       <div ref={projectsRef}>
-        <Projects />
+        <Projects colormode={colorMode} />
       </div>
       <div ref={contactRef}>
         <Contact />
       </div>
 
-      <Footer />
+      <Footer colormode={colorMode} />
     </>
   );
 }

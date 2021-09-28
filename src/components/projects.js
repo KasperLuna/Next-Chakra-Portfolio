@@ -30,7 +30,7 @@ function PriceWrapper({ children }) {
   );
 }
 
-export default function Projects() {
+export default function Projects(props) {
   return (
     <Box py={12}>
       <VStack spacing={2} textAlign="center">
@@ -54,7 +54,7 @@ export default function Projects() {
               Createev
             </Text>
             <Text fontSize={"md"}> e-Commerce Concept Site </Text>
-            <Createev />
+            <Createev colormode={props.colormode} />
           </Box>
           <VStack
             bg={useColorModeValue("gray.50", "gray.700")}
@@ -128,7 +128,7 @@ export default function Projects() {
               This Site
             </Text>
             <Text fontSize={"md"}> Portfolio Site </Text>
-            <ThisSiteLogo />
+            <ThisSiteLogo colormode={props.colormode} />
           </Box>
           <VStack
             bg={useColorModeValue("gray.50", "gray.700")}

@@ -118,7 +118,7 @@ export default function WithSubnavigation(props) {
   };
 
   return (
-    <Box className={styles.nav}>
+    <Box>
       <Flex
         opacity={"none"}
         minH={"60px"}
@@ -146,7 +146,7 @@ export default function WithSubnavigation(props) {
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Box width={"200px"}>
             <Link href={"https://kasperluna.com"}>
-              <Logo />
+              <Logo colormode={props.colormode} />
             </Link>
           </Box>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>

@@ -1,8 +1,13 @@
 import styles from "../styles/svg.module.css";
 
-export default function Createev() {
+export default function Createev({ colormode }) {
   return (
-    <svg className={styles.svg} viewBox="0 0 2048.000000 2048.000000">
+    <svg
+      stroke={colormode === "light" ? "#000000" : "#FFFFFF"}
+      fill={colormode === "light" ? "#000000" : "#FFFFFF"}
+      className={styles.svg}
+      viewBox="0 0 2048.000000 2048.000000"
+    >
       <g transform="translate(0.000000,2048.000000) scale(0.100000,-0.100000)">
         <path
           d="M9830 19099 c-801 -41 -1593 -189 -2345 -438 -288 -95 -589 -212

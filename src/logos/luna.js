@@ -1,9 +1,12 @@
 import styles from "../styles/logo.module.css";
 
-const Luna = () => {
+const Luna = ({ colormode }) => {
   return (
     <>
-      <svg viewBox="0 0 490.06 143.3">
+      <svg
+        stroke={colormode === "light" ? "#000000" : "#FFFFFF"}
+        viewBox="0 0 490.06 143.3"
+      >
         <path
           className={styles.luna}
           d="M96.12,108.46v34.36H6.83V5.07H43.4V108.46Z"

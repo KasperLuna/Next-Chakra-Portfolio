@@ -38,7 +38,7 @@ const SocialButton = ({ children, label, href }) => {
   );
 };
 
-export default function SmallWithLogoLeft() {
+export default function SmallWithLogoLeft({ colormode }) {
   return (
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
@@ -53,7 +53,7 @@ export default function SmallWithLogoLeft() {
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >
-        <Logo />
+        <Logo colormode={colormode} />
         <Text>© 2021 Kasper Luna. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
           <SocialButton

@@ -2,7 +2,6 @@
   stroke-dasharray: 900;
   stroke-dashoffset: 900;
   stroke-width: 2px;
-  stroke: #000000;
   animation: draw 2.2s linear forwards, fillKasper ease-in 2s forwards;
 }
 
@@ -10,7 +9,6 @@
   stroke-dasharray: 800;
   stroke-dashoffset: 900;
   stroke-width: 2.5px;
-  stroke: #000000;
   fill: none;
   animation: draw 2.2s linear forwards;
 }

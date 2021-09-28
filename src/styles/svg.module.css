@@ -1,6 +1,4 @@
 .svg {
-  stroke: #000000;
-  fill: #000000;
   width: 280px;
   height: 280px;
 }
@@ -9,14 +7,4 @@
   width: 280px;
   height: 280px;
   stroke-width: 4px;
-}
-
-.sitelogok {
-  stroke: #000000;
-  fill: #000000;
-}
-
-.sitelogol {
-  stroke: #000000;
-  fill: none;
 }

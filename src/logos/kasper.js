@@ -1,9 +1,12 @@
 import styles from "../styles/logo.module.css";
 
-const Kasper = () => {
+const Kasper = ({ colormode }) => {
   return (
     <>
-      <svg viewBox="0 0 614.19 141.76">
+      <svg
+        stroke={colormode === "light" ? "#000000" : "#FFFFFF"}
+        viewBox="0 0 614.19 141.76"
+      >
         <rect
           className={styles.kasper}
           y="2.14"
