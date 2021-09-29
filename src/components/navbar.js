@@ -141,7 +141,7 @@ export default function WithSubnavigation(props) {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Box width={"200px"}>
+          <Box width={"160px"}>
             <Link href={"https://kasperluna.com"}>
               <Logo colormode={props.colormode} />
             </Link>

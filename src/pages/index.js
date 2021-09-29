@@ -7,12 +7,10 @@ import Projects from "../components/projects.js";
 import Contact from "../components/contact.js";
 import Footer from "../components/footer.js";
 
-import { Box, Flex, Spacer } from "@chakra-ui/layout";
 import { useColorMode } from "@chakra-ui/color-mode";
-import { IconButton } from "@chakra-ui/button";
-import { BsMoon, BsSun } from "react-icons/bs";
 
 import { useRef } from "react";
+import ColorToggle from "../components/colortoggle.js";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -37,27 +35,7 @@ export default function Home() {
         scrollToContact={contactRef}
         colormode={colorMode}
       />
-      <Box
-        marginTop="10px"
-        marginRight="4px"
-        sx={{
-          position: "-webkit-sticky" /* Safari */,
-          position: "sticky",
-          top: "1",
-        }}
-      >
-        <Flex>
-          <Spacer />
-
-          <IconButton
-            colorScheme={"gray"}
-            icon={
-              colorMode === "light" ? <BsMoon size={25} /> : <BsSun size={25} />
-            }
-            onClick={toggleColorMode}
-          />
-        </Flex>
-      </Box>
+      <ColorToggle colorMode={colorMode} toggleColorMode={toggleColorMode} />
       <Hero scrollToAbout={aboutRef} colormode={colorMode} />
 
       <div ref={aboutRef}>
