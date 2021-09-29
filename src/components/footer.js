@@ -75,7 +75,7 @@ export default function SmallWithLogoLeft({ colormode }) {
           <SocialButton
             onClick={() =>
               window.open(
-                `${window.location}/axie`,
+                `${window.location.origin}/axie`,
                 "Axie Counter",
                 "width=310,height=435"
               )

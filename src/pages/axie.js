@@ -9,6 +9,7 @@ import {
   Spacer,
   Heading,
   Text,
+  Tooltip,
 } from "@chakra-ui/react";
 import AxieLogo from "../logos/axie";
 
@@ -30,7 +31,19 @@ export default function Axie() {
       </Head>
       <Container maxW={"xs"}>
         <Stack as={Box} textAlign={"center"} spacing={2} py={1}>
-          <AxieLogo />
+          <Tooltip label="Open in Popup" aria-label="A tooltip">
+            <Box
+              onClick={() =>
+                window.open(
+                  `${window.location.origin}/axie`,
+                  "Axie Counter",
+                  "width=310,height=435"
+                )
+              }
+            >
+              <AxieLogo />
+            </Box>
+          </Tooltip>
           <Text>Energy Counter</Text>
           <Heading>{energy}</Heading>
           <Flex direction={"row"} spacing={10}>
