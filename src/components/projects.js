@@ -147,9 +147,7 @@ export default function Projects(props) {
                 <IconButton
                   as={"a"}
                   colorScheme={"gray"}
-                  href={
-                    "https://github.com/KasperLuna/next-personal-chakra-website"
-                  }
+                  href={"https://github.com/KasperLuna/Next-Chakra-Portfolio"}
                   target={"_blank"}
                   icon={<FaGithub size={25} />}
                 />
