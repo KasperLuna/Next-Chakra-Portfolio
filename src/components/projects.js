@@ -73,7 +73,7 @@ export default function Projects(props) {
                 <IconButton
                   as={"a"}
                   colorScheme={"gray"}
-                  href={"https://github.com/KasperLunaIICS/Createev-Concept"}
+                  href={"https://github.com/KasperLuna/Createev-Concept"}
                   target={"_blank"}
                   icon={<FaGithub size={25} />}
                 />
@@ -113,7 +113,7 @@ export default function Projects(props) {
                   <IconButton
                     as={"a"}
                     colorScheme={"gray"}
-                    href={"https://github.com/KasperLunaIICS/Dealcrafter"}
+                    href={"https://github.com/KasperLuna/Dealcrafter"}
                     target={"_blank"}
                     icon={<FaGithub size={25} />}
                   />
@@ -148,7 +148,7 @@ export default function Projects(props) {
                   as={"a"}
                   colorScheme={"gray"}
                   href={
-                    "https://github.com/KasperLunaIICS/next-personal-chakra-website"
+                    "https://github.com/KasperLuna/next-personal-chakra-website"
                   }
                   target={"_blank"}
                   icon={<FaGithub size={25} />}

@@ -68,10 +68,7 @@ export default function SmallWithLogoLeft({ colormode }) {
           >
             <FaLinkedin />
           </SocialButton>
-          <SocialButton
-            label={"Github"}
-            href={"https://github.com/KasperLunaIICS"}
-          >
+          <SocialButton label={"Github"} href={"https://github.com/KasperLuna"}>
             <FaGithub />
           </SocialButton>
         </Stack>

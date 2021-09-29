@@ -170,7 +170,7 @@ export default function WithSubnavigation(props) {
             <IconButton
               as={"a"}
               colorScheme={"gray"}
-              href={"https://github.com/KasperLunaIICS"}
+              href={"https://github.com/KasperLuna"}
               target={"_blank"}
               icon={<FaGithub size={25} />}
             />
