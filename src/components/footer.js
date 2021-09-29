@@ -9,12 +9,12 @@ import {
 } from "@chakra-ui/react";
 
 //Icon
-import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaFacebook, FaLinkedin, FaEthereum } from "react-icons/fa";
 
 //Logo
 import Logo from "../logos/navlogo.js";
 
-const SocialButton = ({ children, label, href }) => {
+const SocialButton = ({ children, label, href, onClick }) => {
   return (
     <chakra.button
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
@@ -28,6 +28,7 @@ const SocialButton = ({ children, label, href }) => {
       alignItems={"center"}
       justifyContent={"center"}
       transition={"background 0.3s ease"}
+      onClick={onClick}
       _hover={{
         bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
       }}
@@ -70,6 +71,17 @@ export default function SmallWithLogoLeft({ colormode }) {
           </SocialButton>
           <SocialButton label={"Github"} href={"https://github.com/KasperLuna"}>
             <FaGithub />
+          </SocialButton>
+          <SocialButton
+            onClick={() =>
+              window.open(
+                `${window.location}/axie`,
+                "Axie Counter",
+                "width=310,height=435"
+              )
+            }
+          >
+            <FaEthereum />
           </SocialButton>
         </Stack>
       </Container>
