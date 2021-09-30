@@ -16,9 +16,12 @@ import AxieLogo from "../logos/axie";
 //Icons and Logo
 import { GrAdd, GrFormSubtract, GrAddCircle, GrRefresh } from "react-icons/gr";
 import { useState } from "react";
+import { useClipboard } from "@chakra-ui/react";
 
 export default function Axie() {
   const [energy, setEnergy] = useState(3);
+  const wallet = "ronin:c10a01314991df0d8776bda72854556eef5922a5";
+  const { hasCopied, onCopy } = useClipboard(wallet);
   return (
     <>
       <Head>
@@ -73,7 +76,19 @@ export default function Axie() {
           <Button leftIcon={<GrRefresh />} onClick={() => setEnergy(3)}>
             Reset / New Game
           </Button>
-          <Text>© Kasper Luna.</Text>
+          <Stack direction="row">
+            <Text>© Kasper Luna.</Text>
+            <Spacer />
+            <Tooltip
+              label="Ronin Wallet (Copy to Clipboard) ronin:c10a01314991df0d8776bda72854556eef5922a5"
+              placement="top"
+              width="200px"
+            >
+              <Button colorScheme="linkedin" size="xs" onClick={onCopy}>
+                {hasCopied ? "Copied" : "Donate"}
+              </Button>
+            </Tooltip>
+          </Stack>
         </Stack>
       </Container>
     </>
