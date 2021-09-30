@@ -18,15 +18,48 @@ import {
   ModalCloseButton,
   ModalBody,
   Code,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/hooks";
-import AxieLogo from "../logos/axie";
 
 //Icons and Logo
 import { GrAdd, GrFormSubtract, GrAddCircle, GrRefresh } from "react-icons/gr";
 import { useState } from "react";
 import { useClipboard } from "@chakra-ui/react";
 import { BiCopy } from "react-icons/bi";
+
+const Counter = ({ header }) => {
+  return (
+    <>
+      <Box maxW={"70px"}>
+        <Text>{header}</Text>
+        <NumberInput size="md" maxW={20} defaultValue={0} min={0}>
+          <NumberInputField />
+          <NumberInputStepper>
+            <NumberIncrementStepper />
+            <NumberDecrementStepper />
+          </NumberInputStepper>
+        </NumberInput>
+      </Box>
+    </>
+  );
+};
+
+const addEnergy = (energy) => {
+  return energy === 10 ? 0 : 1;
+};
+
+const newRoundEnergy = (energy) => {
+  return energy === 9 ? 1 : energy === 10 ? 0 : 2;
+};
+
+const removeEnergy = (energy) => {
+  return energy === 0 ? 0 : -1;
+};
 
 export default function Axie() {
   const [energy, setEnergy] = useState(3);
@@ -45,20 +78,14 @@ export default function Axie() {
       </Head>
       <Container maxW={"xs"}>
         <Stack as={Box} textAlign={"center"} spacing={2} py={1}>
-          <Tooltip label="Open in Popup" aria-label="A tooltip">
-            <Box
-              onClick={() =>
-                window.open(
-                  `${window.location.origin}/axie`,
-                  "Axie Counter",
-                  "width=310,height=435"
-                )
-              }
-            >
-              <AxieLogo />
-            </Box>
-          </Tooltip>
-          <Text>Energy Counter</Text>
+          <Stack direction="row">
+            <Counter header="Wins" />
+            <Spacer />
+            <Counter header="Draw" />
+            <Spacer />
+            <Counter header="Loss" />
+          </Stack>
+          <Text>Enemy Energy Counter</Text>
           <Heading>{energy}</Heading>
           <Flex direction={"row"} spacing={10}>
             <IconButton
@@ -66,7 +93,7 @@ export default function Axie() {
               width={"100%"}
               colorScheme="messenger"
               icon={<GrAdd />}
-              onClick={() => setEnergy(energy + 1)}
+              onClick={() => setEnergy(energy + addEnergy(energy))}
             />
             <Spacer />
             <IconButton
@@ -74,13 +101,13 @@ export default function Axie() {
               width={"100%"}
               colorScheme="red"
               icon={<GrFormSubtract />}
-              onClick={() => setEnergy(energy - 1)}
+              onClick={() => setEnergy(energy + removeEnergy(energy))}
             />
           </Flex>
           <Button
             colorScheme={"yellow"}
             leftIcon={<GrAddCircle />}
-            onClick={() => setEnergy(energy + 2)}
+            onClick={() => setEnergy(energy + newRoundEnergy(energy))}
           >
             New Round
           </Button>
@@ -95,6 +122,7 @@ export default function Axie() {
             </Button>
           </Stack>
         </Stack>
+
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent px={5}>

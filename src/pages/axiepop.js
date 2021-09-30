@@ -6,7 +6,7 @@ export default function AxiePopup() {
     window.open(
       `${window.location.origin}/axie`,
       "Axie Counter",
-      "width=310,height=435"
+      "width=310,height=360"
     );
     router.push("/");
   };
