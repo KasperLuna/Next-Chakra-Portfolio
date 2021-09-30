@@ -10,16 +10,27 @@ import {
   Heading,
   Text,
   Tooltip,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalCloseButton,
+  ModalBody,
+  Code,
 } from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/hooks";
 import AxieLogo from "../logos/axie";
 
 //Icons and Logo
 import { GrAdd, GrFormSubtract, GrAddCircle, GrRefresh } from "react-icons/gr";
 import { useState } from "react";
 import { useClipboard } from "@chakra-ui/react";
+import { BiCopy } from "react-icons/bi";
 
 export default function Axie() {
   const [energy, setEnergy] = useState(3);
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const wallet = "ronin:c10a01314991df0d8776bda72854556eef5922a5";
   const { hasCopied, onCopy } = useClipboard(wallet);
   return (
@@ -79,17 +90,39 @@ export default function Axie() {
           <Stack direction="row">
             <Text>© Kasper Luna.</Text>
             <Spacer />
-            <Tooltip
-              label="Ronin Wallet (Copy to Clipboard) ronin:c10a01314991df0d8776bda72854556eef5922a5"
-              placement="top"
-              width="200px"
-            >
-              <Button colorScheme="linkedin" size="xs" onClick={onCopy}>
-                {hasCopied ? "Copied" : "Donate"}
-              </Button>
-            </Tooltip>
+            <Button colorScheme="linkedin" size="xs" onClick={onOpen}>
+              Donate
+            </Button>
           </Stack>
         </Stack>
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent px={5}>
+            <ModalHeader>Kasper&apos;s Ronin Wallet</ModalHeader>
+            <ModalBody>
+              <Text>Any Donation is much appreciated!</Text>
+              <Code overflowWrap={"anywhere"}>
+                ronin:c10a01314991df0d8776bda72854556eef5922a5
+              </Code>
+            </ModalBody>
+            <ModalCloseButton />
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={onClose}>
+                Close
+              </Button>
+              <Tooltip
+                label="(Copy to Clipboard) ronin:c10a01314991df0d8776bda72854556eef5922a5"
+                placement="top"
+                width="200px"
+              >
+                <Button leftIcon={<BiCopy />} variant="ghost" onClick={onCopy}>
+                  {hasCopied ? "Copied" : "Copy"}
+                </Button>
+              </Tooltip>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </Container>
     </>
   );
