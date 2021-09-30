@@ -6,6 +6,7 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
+  Tooltip,
 } from "@chakra-ui/react";
 
 //Icon
@@ -57,32 +58,55 @@ export default function SmallWithLogoLeft({ colormode }) {
         <Logo colormode={colormode} />
         <Text>© 2021 Kasper Luna. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
-          <SocialButton
-            label={"Facebook"}
-            href={"https://facebook.com/kasper.luna.1"}
+          <Tooltip
+            openDelay={500}
+            label="Follow me on Facebook"
+            aria-label="A tooltip"
           >
-            <FaFacebook />
-          </SocialButton>
-          <SocialButton
-            label={"LinkedIn"}
-            href={"https://www.linkedin.com/in/kasper-luna-1281a114b/"}
+            <SocialButton
+              label={"Facebook"}
+              href={"https://facebook.com/kasper.luna.1"}
+            >
+              <FaFacebook />
+            </SocialButton>
+          </Tooltip>
+          <Tooltip
+            openDelay={500}
+            label="Connect with me on LinkedIn"
+            aria-label="A tooltip"
           >
-            <FaLinkedin />
-          </SocialButton>
-          <SocialButton label={"Github"} href={"https://github.com/KasperLuna"}>
-            <FaGithub />
-          </SocialButton>
-          <SocialButton
-            onClick={() =>
-              window.open(
-                `${window.location.origin}/axie`,
-                "Axie Counter",
-                "width=310,height=435"
-              )
-            }
+            <SocialButton
+              label={"LinkedIn"}
+              href={"https://www.linkedin.com/in/kasper-luna-1281a114b/"}
+            >
+              <FaLinkedin />
+            </SocialButton>
+          </Tooltip>
+          <Tooltip
+            openDelay={500}
+            label="Check out my Github"
+            aria-label="A tooltip"
           >
-            <FaEthereum />
-          </SocialButton>
+            <SocialButton
+              label={"Github"}
+              href={"https://github.com/KasperLuna"}
+            >
+              <FaGithub />
+            </SocialButton>
+          </Tooltip>
+          <Tooltip openDelay={500} label="Open Axie Ene" aria-label="A tooltip">
+            <SocialButton
+              onClick={() =>
+                window.open(
+                  `${window.location.origin}/axie`,
+                  "Axie Counter",
+                  "width=310,height=435"
+                )
+              }
+            >
+              <FaEthereum />
+            </SocialButton>
+          </Tooltip>
         </Stack>
       </Container>
     </Box>

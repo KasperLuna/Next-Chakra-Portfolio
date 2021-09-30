@@ -69,7 +69,11 @@ export default function Projects(props) {
               </Text>
             </Box>
             <Box w="80%" pt={3}>
-              <Tooltip label="Browse the Github Repo" aria-label="A tooltip">
+              <Tooltip
+                openDelay={500}
+                label="Browse the Github Repo"
+                aria-label="A tooltip"
+              >
                 <IconButton
                   as={"a"}
                   colorScheme={"gray"}
@@ -109,7 +113,11 @@ export default function Projects(props) {
                 </Text>
               </Box>
               <Box w="80%" pt={3}>
-                <Tooltip label="Browse the Github Repo" aria-label="A tooltip">
+                <Tooltip
+                  openDelay={500}
+                  label="Browse the Github Repo"
+                  aria-label="A tooltip"
+                >
                   <IconButton
                     as={"a"}
                     colorScheme={"gray"}
@@ -143,7 +151,11 @@ export default function Projects(props) {
               </Text>
             </Box>
             <Box w="80%" pt={3}>
-              <Tooltip label="Browse the Github Repo" aria-label="A tooltip">
+              <Tooltip
+                openDelay={500}
+                label="Browse the Github Repo"
+                aria-label="A tooltip"
+              >
                 <IconButton
                   as={"a"}
                   colorScheme={"gray"}

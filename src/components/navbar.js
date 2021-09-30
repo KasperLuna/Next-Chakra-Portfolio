@@ -157,7 +157,11 @@ export default function WithSubnavigation(props) {
           direction={"row"}
           spacing={6}
         >
-          <Tooltip label="Connect with me on LinkedIn!" aria-label="A tooltip">
+          <Tooltip
+            openDelay={500}
+            label="Connect with me on LinkedIn!"
+            aria-label="A tooltip"
+          >
             <IconButton
               as={"a"}
               colorScheme={"gray"}
@@ -166,7 +170,11 @@ export default function WithSubnavigation(props) {
               icon={<FaLinkedin size={25} />}
             />
           </Tooltip>
-          <Tooltip label="Check out my Github!" aria-label="A tooltip">
+          <Tooltip
+            openDelay={500}
+            label="Check out my Github!"
+            aria-label="A tooltip"
+          >
             <IconButton
               as={"a"}
               colorScheme={"gray"}
