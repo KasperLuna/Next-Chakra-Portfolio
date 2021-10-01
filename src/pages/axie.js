@@ -115,6 +115,20 @@ export default function Axie() {
             Reset / New Game
           </Button>
           <Stack direction="row">
+            <Button
+              colorScheme="linkedin"
+              size="xs"
+              onClick={() => {
+                window.open(
+                  `${window.location.origin}/axie`,
+                  "Axie Counter",
+                  "width=310,height=360"
+                );
+              }}
+            >
+              Popup
+            </Button>
+            <Spacer />
             <Text>© Kasper Luna.</Text>
             <Spacer />
             <Button colorScheme="linkedin" size="xs" onClick={onOpen}>
