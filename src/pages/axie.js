@@ -129,7 +129,7 @@ export default function Axie() {
               Popup
             </Button>
             <Spacer />
-            <Text>© Kasper Luna.</Text>
+            <a href={"/"}> © Kasper Luna.</a>
             <Spacer />
             <Button colorScheme="linkedin" size="xs" onClick={onOpen}>
               Donate
