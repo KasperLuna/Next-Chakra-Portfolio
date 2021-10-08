@@ -1,8 +1,8 @@
-const Logo = ({ colormode }) => {
+const Logo = ({ colormode, width }) => {
   return (
     <>
       <svg
-        width="165px"
+        width={width}
         stroke={colormode === "light" ? "#000000" : "#FFFFFF"}
         fill={colormode === "light" ? "#000000" : "#FFFFFF"}
         xmlns="http://www.w3.org/2000/svg"
