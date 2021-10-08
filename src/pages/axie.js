@@ -31,6 +31,9 @@ import { GrAdd, GrFormSubtract, GrAddCircle, GrRefresh } from "react-icons/gr";
 import { useState } from "react";
 import { useClipboard } from "@chakra-ui/react";
 import { BiCopy } from "react-icons/bi";
+//Logo
+import Logo from "../logos/navlogo.js";
+import { useColorMode } from "@chakra-ui/color-mode";
 
 const Counter = ({ header }) => {
   return (
@@ -62,6 +65,7 @@ const removeEnergy = (energy) => {
 };
 
 export default function Axie() {
+  const { colorMode } = useColorMode();
   const [energy, setEnergy] = useState(3);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const wallet = "ronin:c10a01314991df0d8776bda72854556eef5922a5";
@@ -129,7 +133,11 @@ export default function Axie() {
               Popup
             </Button>
             <Spacer />
-            <a href={"/"}> © Kasper Luna.</a>
+            <Box pt="4px">
+              <a href={"/"}>
+                <Logo colormode={colorMode} width={"130px"} />
+              </a>
+            </Box>
             <Spacer />
             <Button colorScheme="linkedin" size="xs" onClick={onOpen}>
               Donate
