@@ -34,6 +34,7 @@ import { BiCopy } from "react-icons/bi";
 //Logo
 import Logo from "../logos/navlogo.js";
 import { useColorMode } from "@chakra-ui/color-mode";
+import ColorToggle from "../components/colortoggle.js";
 
 const Counter = ({ header }) => {
   return (
@@ -65,7 +66,7 @@ const removeEnergy = (energy) => {
 };
 
 export default function Axie() {
-  const { colorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
   const [energy, setEnergy] = useState(3);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const wallet = "ronin:c10a01314991df0d8776bda72854556eef5922a5";
@@ -82,12 +83,19 @@ export default function Axie() {
       </Head>
       <Container maxW={"xs"}>
         <Stack as={Box} textAlign={"center"} spacing={2} py={1}>
-          <Stack direction="row">
+          <Stack spacing={1} direction="row">
             <Counter header="Wins" />
             <Spacer />
             <Counter header="Draw" />
             <Spacer />
             <Counter header="Loss" />
+            <Spacer />
+            <Box pt={"14px"}>
+              <ColorToggle
+                colorMode={colorMode}
+                toggleColorMode={toggleColorMode}
+              />
+            </Box>
           </Stack>
           <Text>Enemy Energy Counter</Text>
           <Heading>{energy}</Heading>
