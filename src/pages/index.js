@@ -8,6 +8,7 @@ import Contact from "../components/contact.js";
 import Footer from "../components/footer.js";
 
 import { useColorMode } from "@chakra-ui/color-mode";
+import { ColorModeScript } from "@chakra-ui/react";
 
 import { useRef } from "react";
 import ColorToggle from "../components/colortoggle.js";
@@ -29,6 +30,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <ColorModeScript initialColorMode="dark" />
       <Navbar
         scrollToAbout={aboutRef}
         scrollToProjects={projectsRef}
