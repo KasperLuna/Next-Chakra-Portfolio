@@ -74,9 +74,9 @@ export default function Axie() {
 
   useEffect(() => {
     const handleUserKeyPress = (keyCode) => {
-      if (keyCode == 65) {
+      if (keyCode == 68) {
         setEnergy(energy + addEnergy(energy));
-      } else if (keyCode == 68) {
+      } else if (keyCode == 65) {
         setEnergy(energy + removeEnergy(energy));
       } else if (keyCode == 82) {
         setEnergy(3);
@@ -165,7 +165,7 @@ export default function Axie() {
             </Tooltip>
             <Tooltip
               width="200px"
-              label="Use 'A', 'D' keys to add and Remove Energy, Space for new round, and 'R' to Reset"
+              label="Use 'A', 'D' keys to Remove and Add Energy, Space for new round, and 'R' to Reset"
             >
               <IconButton
                 colorScheme="linkedin"
