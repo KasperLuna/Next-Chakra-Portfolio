@@ -74,9 +74,9 @@ export default function Axie() {
 
   useEffect(() => {
     const handleUserKeyPress = (keyCode) => {
-      if (keyCode == 68) {
+      if (keyCode == 65) {
         setEnergy(energy + addEnergy(energy));
-      } else if (keyCode == 65) {
+      } else if (keyCode == 68) {
         setEnergy(energy + removeEnergy(energy));
       } else if (keyCode == 82) {
         setEnergy(3);
@@ -125,17 +125,17 @@ export default function Axie() {
             <IconButton
               marginRight={5}
               width={"100%"}
-              colorScheme="red"
-              icon={<GrFormSubtract />}
-              onClick={() => setEnergy(energy + removeEnergy(energy))}
+              colorScheme="messenger"
+              icon={<GrAdd />}
+              onClick={() => setEnergy(energy + addEnergy(energy))}
             />
             <Spacer />
             <IconButton
               marginLeft={5}
               width={"100%"}
-              colorScheme="messenger"
-              icon={<GrAdd />}
-              onClick={() => setEnergy(energy + addEnergy(energy))}
+              colorScheme="red"
+              icon={<GrFormSubtract />}
+              onClick={() => setEnergy(energy + removeEnergy(energy))}
             />
           </Flex>
           <Button
@@ -165,7 +165,7 @@ export default function Axie() {
             </Tooltip>
             <Tooltip
               width="200px"
-              label="Use 'A', 'D' keys to Remove and Add Energy, Space for new round, and 'R' to Reset"
+              label="Use 'A', 'D' keys to Add and Remove Energy, Space for new round (+2), and 'R' to Reset"
             >
               <IconButton
                 colorScheme="linkedin"
