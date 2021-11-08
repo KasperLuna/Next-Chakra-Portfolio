@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useEffect } from "react";
 import {
   Box,
   Container,
@@ -24,6 +25,7 @@ import {
   NumberIncrementStepper,
   NumberDecrementStepper,
 } from "@chakra-ui/react";
+import { ExternalLinkIcon, InfoIcon } from "@chakra-ui/icons";
 import { useDisclosure } from "@chakra-ui/hooks";
 
 //Icons and Logo
@@ -35,6 +37,16 @@ import { BiCopy } from "react-icons/bi";
 import Logo from "../logos/navlogo.js";
 import { useColorMode } from "@chakra-ui/color-mode";
 import ColorToggle from "../components/colortoggle.js";
+
+const addEnergy = (energy) => {
+  return energy === 10 ? 0 : 1;
+};
+const newRoundEnergy = (energy) => {
+  return energy === 9 ? 1 : energy === 10 ? 0 : 2;
+};
+const removeEnergy = (energy) => {
+  return energy === 0 ? 0 : -1;
+};
 
 const Counter = ({ header }) => {
   return (
@@ -53,24 +65,34 @@ const Counter = ({ header }) => {
   );
 };
 
-const addEnergy = (energy) => {
-  return energy === 10 ? 0 : 1;
-};
-
-const newRoundEnergy = (energy) => {
-  return energy === 9 ? 1 : energy === 10 ? 0 : 2;
-};
-
-const removeEnergy = (energy) => {
-  return energy === 0 ? 0 : -1;
-};
-
 export default function Axie() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [energy, setEnergy] = useState(3);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const wallet = "ronin:c10a01314991df0d8776bda72854556eef5922a5";
   const { hasCopied, onCopy } = useClipboard(wallet);
+
+  useEffect(() => {
+    const handleUserKeyPress = (keyCode) => {
+      if (keyCode == 65) {
+        setEnergy(energy + addEnergy(energy));
+      } else if (keyCode == 68) {
+        setEnergy(energy + removeEnergy(energy));
+      } else if (keyCode == 82) {
+        setEnergy(3);
+      } else if (keyCode == 32) {
+        setEnergy(energy + newRoundEnergy(energy));
+      }
+    };
+    const funcHandle = (event) => {
+      handleUserKeyPress(event.keyCode);
+    };
+    window.addEventListener("keydown", funcHandle);
+    return () => {
+      window.removeEventListener("keydown", funcHandle);
+    };
+  }, [energy]);
+
   return (
     <>
       <Head>
@@ -103,17 +125,17 @@ export default function Axie() {
             <IconButton
               marginRight={5}
               width={"100%"}
-              colorScheme="messenger"
-              icon={<GrAdd />}
-              onClick={() => setEnergy(energy + addEnergy(energy))}
+              colorScheme="red"
+              icon={<GrFormSubtract />}
+              onClick={() => setEnergy(energy + removeEnergy(energy))}
             />
             <Spacer />
             <IconButton
               marginLeft={5}
               width={"100%"}
-              colorScheme="red"
-              icon={<GrFormSubtract />}
-              onClick={() => setEnergy(energy + removeEnergy(energy))}
+              colorScheme="messenger"
+              icon={<GrAdd />}
+              onClick={() => setEnergy(energy + addEnergy(energy))}
             />
           </Flex>
           <Button
@@ -127,19 +149,30 @@ export default function Axie() {
             Reset / New Game
           </Button>
           <Stack direction="row">
-            <Button
-              colorScheme="linkedin"
-              size="xs"
-              onClick={() => {
-                window.open(
-                  `${window.location.origin}/axie`,
-                  "Axie Counter",
-                  "width=310,height=360"
-                );
-              }}
+            <Tooltip label="Open in a popup window">
+              <IconButton
+                colorScheme="linkedin"
+                size="xs"
+                icon={<ExternalLinkIcon />}
+                onClick={() => {
+                  window.open(
+                    `${window.location.origin}/axie`,
+                    "Axie Counter",
+                    "width=310,height=360"
+                  );
+                }}
+              />
+            </Tooltip>
+            <Tooltip
+              width="200px"
+              label="Use 'A', 'D' keys to add and Remove Energy, Space for new round, and 'R' to Reset"
             >
-              Popup
-            </Button>
+              <IconButton
+                colorScheme="linkedin"
+                size="xs"
+                icon={<InfoIcon />}
+              />
+            </Tooltip>
             <Spacer />
             <Box pt="4px">
               <a href={"/"}>
