@@ -75,8 +75,8 @@ export default function SplitWithImage() {
             <Text color={"gray.500"} fontSize={"lg"}>
               Student at the University of Santo Tomas currently in my last year
               of BS Information Systems, Specializing in Service Management.
-              I&apos;m <b>looking for an Internship</b> starting{" "}
-              <b>January 2022.</b>
+              {/* I&apos;m <b>looking for an Internship</b> starting{" "}
+              <b>January 2022.</b> */}
             </Text>
             <Stack spacing={1}>
               <Feature
@@ -86,7 +86,7 @@ export default function SplitWithImage() {
                 iconBg={useColorModeValue("yellow.100", "yellow.900")}
                 title={"Full-Stack Developer"}
                 description={
-                  "With a particular focus on Backend Development, I've utilized PostgreSQL, Express, React.js, and Node.js to full effect."
+                  "With a particular focus on Backend Development, I've utilized PostgreSQL, Express.js, React.js, and Node.js to full effect."
                 }
               />
               <Feature
