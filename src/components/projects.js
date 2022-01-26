@@ -32,7 +32,7 @@ function PriceWrapper({ children }) {
 
 export default function Projects(props) {
   return (
-    <Box py={12}>
+    <Box pt={20}>
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">
           My Projects
