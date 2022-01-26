@@ -67,7 +67,7 @@ export default function Skills(props) {
             Technical Skills
           </Heading>
           <Text fontSize="lg" color={"gray.500"}>
-            Here&apos;s some of the things I&apos;ve picked up along the way.
+            Here&apos;s some of the tricks I&apos;ve picked up along the way.
           </Text>
         </Stack>
         <WrapBox>
@@ -99,7 +99,7 @@ export default function Skills(props) {
         </WrapBox>
         <WrapBox>
           <Text fontWeight="500" fontSize="2xl" alignSelf={"center"}>
-            Miscellaneous
+            Deployment
           </Text>
           <Wrap justify="center" spacing="30px">
             <IconSet title="Git" icon={<FaGitAlt size={60} />} />
