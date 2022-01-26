@@ -23,6 +23,7 @@ import {
   SiMaterialui,
   SiChakraui,
   SiMicrosoftazure,
+  SiNetlify,
 } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
 import { FaNode, FaGitAlt } from "react-icons/fa";
@@ -112,6 +113,7 @@ export default function Skills(props) {
               icon={<SiMicrosoftazure size={60} />}
             />
             <IconSet title="Heroku" icon={<SiHeroku size={60} />} />
+            <IconSet title="Netlify" icon={<SiNetlify size={60} />}/>
           </Wrap>
         </WrapBox>
       </Box>
