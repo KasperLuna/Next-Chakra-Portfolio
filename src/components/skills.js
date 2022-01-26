@@ -39,7 +39,6 @@ function IconSet(props) {
 function WrapBox({ children }) {
   return (
     <Box
-      mt={5}
       pt={3}
       pb={3}
       pl={3}
@@ -57,7 +56,7 @@ function WrapBox({ children }) {
   );
 }
 
-export default function Languages(props) {
+export default function Skills(props) {
   return (
     <Stack alignContent={"center"} direction={"column"} mt={10} mb={10}>
       <Box alignSelf={"center"} w={[400, 600, 700]}>

@@ -12,11 +12,12 @@ import { ColorModeScript } from "@chakra-ui/react";
 
 import { useRef } from "react";
 import ColorToggle from "../components/colortoggle.js";
-import Languages from "../components/languages.js";
+import Skills from "../components/Skills.js";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
   const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
@@ -34,6 +35,7 @@ export default function Home() {
       <ColorModeScript initialColorMode="dark" />
       <Navbar
         scrollToAbout={aboutRef}
+        scrollToSkills={skillsRef}
         scrollToProjects={projectsRef}
         scrollToContact={contactRef}
         colormode={colorMode}
@@ -44,8 +46,8 @@ export default function Home() {
       <div ref={aboutRef}>
         <About />
       </div>
-      <div>
-        <Languages />
+      <div ref={skillsRef}>
+        <Skills />
       </div>
       <div ref={projectsRef}>
         <Projects colormode={colorMode} />

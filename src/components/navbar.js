@@ -40,6 +40,10 @@ export default function WithSubnavigation(props) {
       scroll: props.scrollToAbout,
     },
     {
+      label: "Skills",
+      scroll: props.scrollToSkills,
+    },
+    {
       label: "Projects",
       scroll: props.scrollToProjects,
     },
