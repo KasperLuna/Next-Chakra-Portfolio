@@ -77,7 +77,6 @@ export default function Skills(props) {
           <Wrap justify="center" spacing="30px">
             <IconSet title="HTML5" icon={<AiFillHtml5 size={60} />} />
             <IconSet title="CSS3" icon={<DiCss3 size={60} />} />
-            <IconSet title="PHP" icon={<SiPhp size={60} />} />
             <IconSet title="React.js" icon={<GrReactjs size={60} />} />
             <IconSet title="Next.js" icon={<SiNextdotjs size={60} />} />
             <IconSet title="Material UI" icon={<SiMaterialui size={60} />} />
@@ -92,6 +91,7 @@ export default function Skills(props) {
             <IconSet title="Node.js" icon={<FaNode size={60} />} />
             <IconSet title="Express.js" icon={<SiExpress size={60} />} />
             <IconSet title="Nest.js" icon={<SiNestjs size={60} />} />
+            <IconSet title="PHP" icon={<SiPhp size={60} />} />
             <IconSet title="Redis" icon={<SiRedis size={60} />} />
             <IconSet title="PostgreSQL" icon={<SiPostgresql size={60} />} />
             <IconSet title="MySQL" icon={<SiMysql size={60} />} />
