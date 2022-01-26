@@ -6,6 +6,7 @@ import {
   Tooltip,
   useColorModeValue,
   Center,
+  Wrap,
 } from "@chakra-ui/react";
 
 import { AiFillHtml5, AiOutlineGithub } from "react-icons/ai";
@@ -72,36 +73,34 @@ export default function Languages(props) {
           <Text fontWeight="500" fontSize="2xl" alignSelf={"center"}>
             Frontend
           </Text>
-          <Stack direction={"row"} spacing={[1, 2, 6, 10]}>
+          <Wrap justify="center" spacing="30px">
             <IconSet title="HTML5" icon={<AiFillHtml5 size={60} />} />
             <IconSet title="CSS3" icon={<DiCss3 size={60} />} />
             <IconSet title="PHP" icon={<SiPhp size={60} />} />
             <IconSet title="React.js" icon={<GrReactjs size={60} />} />
             <IconSet title="Next.js" icon={<SiNextdotjs size={60} />} />
-            <IconSet title="Express.js" icon={<SiMaterialui size={60} />} />
-            <IconSet title="Express.js" icon={<SiChakraui size={60} />} />
-          </Stack>
+            <IconSet title="Material UI" icon={<SiMaterialui size={60} />} />
+            <IconSet title="Chakra UI" icon={<SiChakraui size={60} />} />
+          </Wrap>
         </WrapBox>
         <WrapBox>
           <Text fontWeight="500" fontSize="2xl" alignSelf={"center"}>
             Backend
           </Text>
-          <Stack direction={"row"} spacing={[1, 2, 6, 10]}>
+          <Wrap justify="center" spacing="30px">
             <IconSet title="Node.js" icon={<FaNode size={60} />} />
             <IconSet title="Express.js" icon={<SiExpress size={60} />} />
             <IconSet title="Nest.js" icon={<SiNestjs size={60} />} />
-            {/* TODO ADD EXPRESS JS */}
-            {/* TODO ADD NEST JS */}
             <IconSet title="Redis" icon={<SiRedis size={60} />} />
             <IconSet title="PostgreSQL" icon={<SiPostgresql size={60} />} />
             <IconSet title="MySQL" icon={<SiMysql size={60} />} />
-          </Stack>
+          </Wrap>
         </WrapBox>
         <WrapBox>
           <Text fontWeight="500" fontSize="2xl" alignSelf={"center"}>
             Miscellaneous
           </Text>
-          <Stack direction={"row"} spacing={[1, 2, 6, 10]}>
+          <Wrap justify="center" spacing="30px">
             <IconSet title="Git" icon={<FaGitAlt size={60} />} />
             <IconSet title="GitHub" icon={<AiOutlineGithub size={60} />} />
             <IconSet
@@ -113,7 +112,7 @@ export default function Languages(props) {
               icon={<SiMicrosoftazure size={60} />}
             />
             <IconSet title="Heroku" icon={<SiHeroku size={60} />} />
-          </Stack>
+          </Wrap>
         </WrapBox>
       </Box>
     </Stack>
