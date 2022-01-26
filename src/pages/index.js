@@ -12,6 +12,7 @@ import { ColorModeScript } from "@chakra-ui/react";
 
 import { useRef } from "react";
 import ColorToggle from "../components/colortoggle.js";
+import Languages from "../components/languages.js";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -42,6 +43,9 @@ export default function Home() {
 
       <div ref={aboutRef}>
         <About />
+      </div>
+      <div>
+        <Languages />
       </div>
       <div ref={projectsRef}>
         <Projects colormode={colorMode} />
