@@ -155,7 +155,7 @@ export default function WithSubnavigation(props) {
           flex={{ base: 1, md: 0 }}
           justify={"flex-end"}
           direction={"row"}
-          spacing={6}
+          spacing={[1, 2, 6, 10]}
         >
           <Tooltip
             openDelay={500}
