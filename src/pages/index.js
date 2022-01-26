@@ -12,7 +12,7 @@ import { ColorModeScript } from "@chakra-ui/react";
 
 import { useRef } from "react";
 import ColorToggle from "../components/colortoggle.js";
-import Skills from "../components/Skills.js";
+import Skills from "../components/skills.js";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
