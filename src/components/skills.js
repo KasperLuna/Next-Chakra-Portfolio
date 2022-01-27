@@ -75,12 +75,24 @@ export default function Skills(props) {
             Frontend
           </Text>
           <Wrap justify="center" spacing="30px">
-            <IconSet title="HTML5" icon={<AiFillHtml5 size={60} />} />
-            <IconSet title="CSS3" icon={<DiCss3 size={60} />} />
-            <IconSet title="React.js" icon={<GrReactjs size={60} />} />
+            <IconSet
+              title="HTML5"
+              icon={<AiFillHtml5 size={60} color="#dd4b25" />}
+            />
+            <IconSet title="CSS3" icon={<DiCss3 size={60} color="#264de4" />} />
+            <IconSet
+              title="React.js"
+              icon={<GrReactjs size={60} color="#61dafb" />}
+            />
             <IconSet title="Next.js" icon={<SiNextdotjs size={60} />} />
-            <IconSet title="Material UI" icon={<SiMaterialui size={60} />} />
-            <IconSet title="Chakra UI" icon={<SiChakraui size={60} />} />
+            <IconSet
+              title="Material UI"
+              icon={<SiMaterialui size={60} color="#007fff" />}
+            />
+            <IconSet
+              title="Chakra UI"
+              icon={<SiChakraui size={60} color="#56c8c7" />}
+            />
           </Wrap>
         </WrapBox>
         <WrapBox>
@@ -88,13 +100,28 @@ export default function Skills(props) {
             Backend
           </Text>
           <Wrap justify="center" spacing="30px">
-            <IconSet title="Node.js" icon={<FaNode size={60} />} />
+            <IconSet
+              title="Node.js"
+              icon={<FaNode size={60} color="#23b45d" />}
+            />
             <IconSet title="Express.js" icon={<SiExpress size={60} />} />
-            <IconSet title="Nest.js" icon={<SiNestjs size={60} />} />
-            <IconSet title="PHP" icon={<SiPhp size={60} />} />
-            <IconSet title="Redis" icon={<SiRedis size={60} />} />
-            <IconSet title="PostgreSQL" icon={<SiPostgresql size={60} />} />
-            <IconSet title="MySQL" icon={<SiMysql size={60} />} />
+            <IconSet
+              title="Nest.js"
+              icon={<SiNestjs size={60} color="#e1244e" />}
+            />
+            <IconSet title="PHP" icon={<SiPhp size={60} color="#787cb4" />} />
+            <IconSet
+              title="Redis"
+              icon={<SiRedis size={60} color="#d82c20" />}
+            />
+            <IconSet
+              title="PostgreSQL"
+              icon={<SiPostgresql size={60} color="#336791" />}
+            />
+            <IconSet
+              title="MySQL"
+              icon={<SiMysql size={60} color="#f57900" />}
+            />
           </Wrap>
         </WrapBox>
         <WrapBox>
@@ -102,18 +129,29 @@ export default function Skills(props) {
             Deployment
           </Text>
           <Wrap justify="center" spacing="30px">
-            <IconSet title="Git" icon={<FaGitAlt size={60} />} />
+            <IconSet
+              title="Git"
+              icon={<FaGitAlt size={60} color="#f05033" />}
+            />
             <IconSet title="GitHub" icon={<AiOutlineGithub size={60} />} />
+
+            <IconSet
+              title="Microsoft Azure"
+              icon={<SiMicrosoftazure size={60} color="#008ad7" />}
+            />
+
+            <IconSet
+              title="Heroku"
+              icon={<SiHeroku size={60} color="#6762a5" />}
+            />
             <IconSet
               title="Google Cloud Platform"
               icon={<DiGoogleCloudPlatform size={60} />}
             />
             <IconSet
-              title="Microsoft Azure"
-              icon={<SiMicrosoftazure size={60} />}
+              title="Netlify"
+              icon={<SiNetlify size={60} color="#38aeba" />}
             />
-            <IconSet title="Heroku" icon={<SiHeroku size={60} />} />
-            <IconSet title="Netlify" icon={<SiNetlify size={60} />}/>
           </Wrap>
         </WrapBox>
       </Box>
