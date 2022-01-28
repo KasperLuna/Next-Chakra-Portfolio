@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   Center,
   Wrap,
+  Fade,
 } from "@chakra-ui/react";
 
 import { AiFillHtml5, AiOutlineGithub } from "react-icons/ai";
@@ -39,29 +40,31 @@ function IconSet(props) {
 
 function WrapBox({ children }) {
   return (
-    <Box
-      mt={5}
-      pt={3}
-      pb={3}
-      pl={3}
-      pr={3}
-      shadow="base"
-      borderWidth="1px"
-      alignSelf={"center"}
-      borderColor={useColorModeValue("gray.200", "gray.500")}
-      borderRadius={"xl"}
-    >
-      <Center>
-        <Stack direction={"column"}>{children}</Stack>{" "}
-      </Center>
-    </Box>
+    <Fade in={true} whileHover={{ scale: 1.05 }}>
+      <Box
+        mt={5}
+        pt={3}
+        pb={3}
+        pl={3}
+        pr={3}
+        shadow="base"
+        borderWidth="1px"
+        alignSelf={"center"}
+        borderColor={useColorModeValue("gray.200", "gray.500")}
+        borderRadius={"xl"}
+      >
+        <Center>
+          <Stack direction={"column"}>{children}</Stack>
+        </Center>
+      </Box>
+    </Fade>
   );
 }
 
 export default function Skills(props) {
   return (
     <Stack alignContent={"center"} direction={"column"} pt={20} mb={10}>
-      <Box alignSelf={"center"} w={[400, 600, 700]}>
+      <Box alignSelf={"center"} w={[300, 400, 600, 700]}>
         <Stack direction={"column"} spacing={2} textAlign="center">
           <Heading as="h1" fontSize="4xl">
             Technical Skills

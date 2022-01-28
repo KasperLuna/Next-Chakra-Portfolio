@@ -14,6 +14,7 @@ import {
   AlertTitle,
   AlertDescription,
   useColorModeValue,
+  Fade,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { AlertIcon } from "@chakra-ui/alert";
@@ -49,7 +50,7 @@ export default function SimpleCard() {
   };
 
   return (
-    <Flex align={"center"} justify={"center"} paddingBottom={10}>
+    <Flex align={"center"} justify={"center"} pt={20} pb={20}>
       <Stack spacing={8} mx={"auto"} maxW={"lg"} px={7}>
         <Stack textAlign={"center"} align={"center"}>
           <Heading fontSize={"4xl"}>Contact me!</Heading>
@@ -62,52 +63,54 @@ export default function SimpleCard() {
           </Text>
         </Stack>
         <form onSubmit={handleSubmit}>
-          <Box
-            rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
-            boxShadow={"lg"}
-            p={9}
-          >
-            <Stack spacing={4}>
-              <FormControl id="email">
-                <FormLabel>Email address</FormLabel>
-                <Input
-                  onChange={(e) => setName(e.target.value)}
-                  type="email"
-                  placeholder="johndoe@gmail.com"
-                  required
-                />
-              </FormControl>
-              <FormControl id="name">
-                <FormLabel>Full Name</FormLabel>
-                <Input
-                  onChange={(e) => setEmail(e.target.value)}
-                  type="text"
-                  placeholder="John Doe"
-                  required
-                />
-              </FormControl>
-              <FormControl id="message">
-                <FormLabel>Message</FormLabel>
-                <Textarea
-                  onChange={(e) => setMessage(e.target.value)}
-                  type="text"
-                  placeholder="Good Work, Kasper!"
-                  required
-                />
-              </FormControl>
-              <Button
-                type="submit"
-                bg={"blue.400"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-              >
-                Send!
-              </Button>
-            </Stack>
-          </Box>
+          <Fade in={true} whileHover={{ scale: 1.05 }}>
+            <Box
+              rounded={"lg"}
+              bg={useColorModeValue("white", "gray.700")}
+              boxShadow={"lg"}
+              p={9}
+            >
+              <Stack spacing={4}>
+                <FormControl id="email">
+                  <FormLabel>Email address</FormLabel>
+                  <Input
+                    onChange={(e) => setName(e.target.value)}
+                    type="email"
+                    placeholder="johndoe@gmail.com"
+                    required
+                  />
+                </FormControl>
+                <FormControl id="name">
+                  <FormLabel>Full Name</FormLabel>
+                  <Input
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="text"
+                    placeholder="John Doe"
+                    required
+                  />
+                </FormControl>
+                <FormControl id="message">
+                  <FormLabel>Message</FormLabel>
+                  <Textarea
+                    onChange={(e) => setMessage(e.target.value)}
+                    type="text"
+                    placeholder="Good Work, Kasper!"
+                    required
+                  />
+                </FormControl>
+                <Button
+                  type="submit"
+                  bg={"blue.400"}
+                  color={"white"}
+                  _hover={{
+                    bg: "blue.500",
+                  }}
+                >
+                  Send!
+                </Button>
+              </Stack>
+            </Box>
+          </Fade>
           <form
             name="contact"
             netlify="true"

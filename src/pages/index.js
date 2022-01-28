@@ -3,16 +3,15 @@ import Head from "next/head";
 import Navbar from "../components/navbar.js";
 import Hero from "../components/hero.js";
 import About from "../components/about.js";
+import Skills from "../components/skills.js";
 import Projects from "../components/projects.js";
 import Contact from "../components/contact.js";
 import Footer from "../components/footer.js";
 
 import { useColorMode } from "@chakra-ui/color-mode";
-import { ColorModeScript } from "@chakra-ui/react";
-
 import { useRef } from "react";
+import { ColorModeScript } from "@chakra-ui/react";
 import ColorToggle from "../components/colortoggle.js";
-import Skills from "../components/skills.js";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();

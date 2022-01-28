@@ -1,6 +1,6 @@
 import {
   Box,
-  Stack,
+  Wrap,
   Heading,
   Text,
   VStack,
@@ -8,6 +8,7 @@ import {
   IconButton,
   Tooltip,
   Image,
+  Fade,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 
@@ -17,16 +18,19 @@ import ThisSiteLogo from "../logos/thisSiteLogo.js";
 
 function PriceWrapper({ children }) {
   return (
-    <Box
-      mb={4}
-      shadow="base"
-      borderWidth="1px"
-      alignSelf={{ base: "center", lg: "flex-start" }}
-      borderColor={useColorModeValue("gray.200", "gray.500")}
-      borderRadius={"xl"}
-    >
-      {children}
-    </Box>
+    <Fade in={true} whileHover={{ scale: 1.05 }}>
+      <Box
+        mb={4}
+        maxW={"s"}
+        shadow="base"
+        borderWidth="1px"
+        alignSelf={{ base: "center", lg: "flex-start" }}
+        borderColor={useColorModeValue("gray.200", "gray.500")}
+        borderRadius={"xl"}
+      >
+        {children}
+      </Box>
+    </Fade>
   );
 }
 
@@ -41,8 +45,7 @@ export default function Projects(props) {
           I&apos;ve worked on a few things, feel free to check my repositories!
         </Text>
       </VStack>
-      <Stack
-        direction={{ base: "column", lg: "row" }}
+      <Wrap
         textAlign="center"
         justify="center"
         spacing={{ base: 5, lg: 8 }}
@@ -167,7 +170,7 @@ export default function Projects(props) {
             </Box>
           </VStack>
         </PriceWrapper>
-      </Stack>
+      </Wrap>
     </Box>
   );
 }
