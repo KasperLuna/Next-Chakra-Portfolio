@@ -1,6 +1,5 @@
 import {
   Box,
-  Stack,
   Heading,
   Text,
   VStack,
@@ -9,6 +8,7 @@ import {
   Tooltip,
   Image,
   Fade,
+  Wrap,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 
@@ -45,14 +45,7 @@ export default function Projects(props) {
           I&apos;ve worked on a few things, feel free to check my repositories!
         </Text>
       </VStack>
-      <Stack
-        direction={{ base: "column", lg: "row" }}
-        textAlign="center"
-        justify="center"
-        spacing={{ base: 5, lg: 8 }}
-        py={10}
-        ml="5px"
-      >
+      <Wrap w={"95%"} pt={9} spacing={8} justify="center">
         <PriceWrapper>
           <Box py={4} px={7}>
             <Text fontWeight="500" fontSize="2xl">
@@ -172,7 +165,7 @@ export default function Projects(props) {
             </Box>
           </VStack>
         </PriceWrapper>
-      </Stack>
+      </Wrap>
     </VStack>
   );
 }
