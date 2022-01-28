@@ -1,6 +1,6 @@
 import {
   Box,
-  Wrap,
+  Stack,
   Heading,
   Text,
   VStack,
@@ -45,13 +45,13 @@ export default function Projects(props) {
           I&apos;ve worked on a few things, feel free to check my repositories!
         </Text>
       </VStack>
-      <Wrap
+      <Stack
+        direction={{ base: "column", lg: "row" }}
         textAlign="center"
         justify="center"
         spacing={{ base: 5, lg: 8 }}
         py={10}
         ml="5px"
-        width={"fit-content"}
       >
         <PriceWrapper>
           <Box py={4} px={7}>
@@ -172,7 +172,7 @@ export default function Projects(props) {
             </Box>
           </VStack>
         </PriceWrapper>
-      </Wrap>
+      </Stack>
     </VStack>
   );
 }

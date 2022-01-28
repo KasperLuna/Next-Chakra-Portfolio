@@ -64,7 +64,7 @@ function WrapBox({ children }) {
 export default function Skills(props) {
   return (
     <Stack alignContent={"center"} direction={"column"} pt={20} mb={10}>
-      <Box alignSelf={"center"} w={[300, 400, 600, 700]}>
+      <Box alignSelf={"center"} w={{ xs: "sm", md: "xl" }}>
         <Stack direction={"column"} spacing={2} textAlign="center">
           <Heading as="h1" fontSize="4xl">
             Technical Skills
