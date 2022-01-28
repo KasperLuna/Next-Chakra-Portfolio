@@ -36,7 +36,7 @@ function PriceWrapper({ children }) {
 
 export default function Projects(props) {
   return (
-    <Box pt={20}>
+    <VStack pt={20}>
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">
           My Projects
@@ -50,6 +50,8 @@ export default function Projects(props) {
         justify="center"
         spacing={{ base: 5, lg: 8 }}
         py={10}
+        ml="5px"
+        width={"fit-content"}
       >
         <PriceWrapper>
           <Box py={4} px={7}>
@@ -171,6 +173,6 @@ export default function Projects(props) {
           </VStack>
         </PriceWrapper>
       </Wrap>
-    </Box>
+    </VStack>
   );
 }
