@@ -77,7 +77,7 @@ export default function SmallWithLogoLeft({ colormode }) {
           >
             <SocialButton
               label={"LinkedIn"}
-              href={"https://www.linkedin.com/in/kasper-luna-1281a114b/"}
+              href={"https://www.linkedin.com/in/kasperluna/"}
             >
               <FaLinkedin />
             </SocialButton>

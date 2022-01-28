@@ -169,7 +169,7 @@ export default function WithSubnavigation(props) {
             <IconButton
               as={"a"}
               colorScheme={"gray"}
-              href={"https://www.linkedin.com/in/kasper-luna-1281a114b"}
+              href={"https://www.linkedin.com/in/kasperluna/"}
               target={"_blank"}
               icon={<FaLinkedin size={25} />}
             />
