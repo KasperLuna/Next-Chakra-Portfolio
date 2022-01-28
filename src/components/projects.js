@@ -78,7 +78,7 @@ export default function Projects(props) {
           I&apos;ve worked on a few things, feel free to check my repositories!
         </Text>
       </VStack>
-      <Wrap w={"95%"} pt={9} spacing={8} justify="center">
+      <Wrap w={"90%"} pt={9} spacing={8} justify="center">
         <PriceWrapper
           title={"Createev"}
           Tag={"e-Commerce Concept Site "}
