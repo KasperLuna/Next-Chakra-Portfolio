@@ -63,7 +63,7 @@ export default function SimpleCard() {
           </Text>
         </Stack>
         <form onSubmit={handleSubmit}>
-          <Fade in={true} whileHover={{ scale: 1.05 }}>
+          <Fade in={true} whileHover={{ scale: 1.025 }}>
             <Box
               rounded={"lg"}
               bg={useColorModeValue("white", "gray.700")}
