@@ -10,15 +10,20 @@ import Footer from "../components/footer.js";
 
 import { useColorMode } from "@chakra-ui/color-mode";
 import { useRef } from "react";
+import { useInViewport } from "react-in-viewport";
 import { ColorModeScript } from "@chakra-ui/react";
 import ColorToggle from "../components/colortoggle.js";
+import ScrollToTop from "../components/scrollToTop.js";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const navRef = useRef(null);
+  const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+  const { inViewport } = useInViewport(heroRef, { rootMargin: "-300px" }); //For Scroll Back To Top Button
 
   return (
     <>
@@ -32,15 +37,19 @@ export default function Home() {
       </Head>
 
       <ColorModeScript initialColorMode="dark" />
-      <Navbar
-        scrollToAbout={aboutRef}
-        scrollToSkills={skillsRef}
-        scrollToProjects={projectsRef}
-        scrollToContact={contactRef}
-        colormode={colorMode}
-      />
+      <div ref={navRef}>
+        <Navbar
+          scrollToAbout={aboutRef}
+          scrollToSkills={skillsRef}
+          scrollToProjects={projectsRef}
+          scrollToContact={contactRef}
+          colormode={colorMode}
+        />
+      </div>
       <ColorToggle colorMode={colorMode} toggleColorMode={toggleColorMode} />
-      <Hero scrollToAbout={aboutRef} colormode={colorMode} />
+      <div ref={heroRef}>
+        <Hero scrollToAbout={aboutRef} colormode={colorMode} />
+      </div>
 
       <div ref={aboutRef}>
         <About />
@@ -54,7 +63,7 @@ export default function Home() {
       <div ref={contactRef}>
         <Contact />
       </div>
-
+      <ScrollToTop visible={inViewport} scrollToTop={navRef} />
       <Footer colormode={colorMode} />
     </>
   );

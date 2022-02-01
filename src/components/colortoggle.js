@@ -1,5 +1,5 @@
 import { Box, Flex, Spacer } from "@chakra-ui/layout";
-import { Tooltip } from "@chakra-ui/tooltip";
+import { Tooltip } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/button";
 import { BsMoon, BsSun } from "react-icons/bs";
 
