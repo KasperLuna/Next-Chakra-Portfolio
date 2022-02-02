@@ -23,7 +23,9 @@ export default function Home() {
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  const { inViewport } = useInViewport(heroRef, { rootMargin: "-300px" }); //For Scroll Back To Top Button
+  const activeHero = useInViewport(heroRef, {
+    rootMargin: "-300px",
+  }).inViewport;
 
   return (
     <>
@@ -63,7 +65,7 @@ export default function Home() {
       <div ref={contactRef}>
         <Contact />
       </div>
-      <ScrollToTop visible={inViewport} scrollToTop={navRef} />
+      <ScrollToTop visible={activeHero} scrollToTop={navRef} />
       <Footer colormode={colorMode} />
     </>
   );

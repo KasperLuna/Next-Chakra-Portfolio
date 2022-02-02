@@ -45,7 +45,6 @@ export default function SmallWithLogoLeft({ colormode }) {
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
-      mt={20}
       position={"sticky"}
     >
       <Container
@@ -58,7 +57,7 @@ export default function SmallWithLogoLeft({ colormode }) {
         align={{ base: "center", md: "center" }}
       >
         <Logo colormode={colormode} width={"155px"} />
-        <Text>© 2021 Kasper Luna. All rights reserved</Text>
+        <Text>© 2022 Kasper Luna. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
           <Tooltip
             openDelay={500}
@@ -96,7 +95,11 @@ export default function SmallWithLogoLeft({ colormode }) {
               <FaGithub />
             </SocialButton>
           </Tooltip>
-          <Tooltip openDelay={500} label="Open Axie Ene" aria-label="A tooltip">
+          <Tooltip
+            openDelay={500}
+            label="Open Axie Energy Counter"
+            aria-label="A tooltip"
+          >
             <SocialButton
               onClick={() =>
                 window.open(
