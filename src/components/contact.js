@@ -56,7 +56,7 @@ export default function SimpleCard() {
           <Heading fontSize={"4xl"}>Contact me!</Heading>
           <Text fontSize={"lg"} color={"gray.500"}>
             You can always reach me at{" "}
-            <Link href="mailto:luna.kasper.f@gmail.com" color={"blue.400"}>
+            <Link href="mailto:mail@kasperluna.com" color={"blue.400"}>
               mail@kasperluna.com
             </Link>
             , but you can leave a message here too :)
