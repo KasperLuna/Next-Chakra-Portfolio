@@ -62,7 +62,7 @@ export default function SimpleCard() {
             , but you can leave a message here too :)
           </Text>
         </Stack>
-        <form onSubmit={handleSubmit}>
+        <form data-netlify-recaptcha="true" onSubmit={handleSubmit}>
           <Fade in={true} whileHover={{ scale: 1.025 }}>
             <Box
               rounded={"lg"}
