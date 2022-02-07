@@ -62,7 +62,7 @@ export default function SimpleCard() {
             , but you can leave a message here too :)
           </Text>
         </Stack>
-        <form data-netlify-recaptcha="true" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <Fade in={true} whileHover={{ scale: 1.025 }}>
             <Box
               rounded={"lg"}
@@ -116,6 +116,7 @@ export default function SimpleCard() {
             netlify="true"
             netlify-honeypot="bot-field"
             data-netlify="true"
+            data-netlify-recaptcha="true"
             hidden
           >
             <input type="text" name="Name" />
