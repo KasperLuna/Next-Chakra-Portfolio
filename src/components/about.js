@@ -112,12 +112,41 @@ export default function SplitWithImage() {
           </Stack>
         </Accordion>
         <Flex>
-          <Image
-            rounded={"3xl"}
-            alt={"feature image"}
-            src="/face.jpg"
-            objectFit={"cover"}
-          />
+          <Box
+            role={"group"}
+            bg={useColorModeValue("white", "gray.800")}
+            rounded={"xl"}
+            pos={"relative"}
+            zIndex={1}
+          >
+            <Box
+              rounded={"lg"}
+              pos={"relative"}
+              _after={{
+                transition: "all .3s ease",
+                content: '""',
+                w: "full",
+                h: "full",
+                pos: "absolute",
+                top: 5,
+                backgroundImage: "/face.jpg",
+                filter: "blur(20px)",
+                zIndex: -1,
+              }}
+              _groupHover={{
+                _after: {
+                  filter: "blur(35px)",
+                },
+              }}
+            >
+              <Image
+                rounded={"3xl"}
+                alt={"feature image"}
+                src={"/face.jpg"}
+                objectFit={"cover"}
+              />
+            </Box>
+          </Box>
         </Flex>
       </SimpleGrid>
     </Container>
