@@ -39,9 +39,9 @@ export default function SimpleCard() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": "contact",
-          Name: name,
-          Email: email,
-          Message: message,
+          name: name,
+          email: email,
+          message: message,
         }),
       })
         .then(() => setOpen(true))
@@ -118,9 +118,9 @@ export default function SimpleCard() {
             data-netlify="true"
             hidden
           >
-            <input type="text" name="Name" />
-            <input type="email" name="Email" />
-            <input type="text" name="Message" />
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <input type="text" name="message" />
           </form>
           {open ? (
             <Alert status="success">
