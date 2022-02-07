@@ -116,7 +116,6 @@ export default function SimpleCard() {
             netlify="true"
             netlify-honeypot="bot-field"
             data-netlify="true"
-            data-netlify-recaptcha="true"
             hidden
           >
             <input type="text" name="Name" />
