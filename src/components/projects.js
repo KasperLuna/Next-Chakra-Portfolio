@@ -2,6 +2,7 @@ import {
   Box,
   Heading,
   Text,
+  Stack,
   VStack,
   useColorModeValue,
   IconButton,
@@ -9,12 +10,55 @@ import {
   Image,
   Fade,
   Wrap,
+  Icon,
 } from "@chakra-ui/react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaTooth } from "react-icons/fa";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 //Logos
 import Createev from "../logos/createev.js";
 import ThisSiteLogo from "../logos/thisSiteLogo.js";
+
+function SubIcons(props) {
+  return (
+    <>
+      {props.GitLink ? (
+        <Tooltip
+          openDelay={500}
+          label="Browse the Github Repo"
+          aria-label="A tooltip"
+        >
+          <IconButton
+            as={"a"}
+            colorScheme={"gray"}
+            href={props.GitLink}
+            target={"_blank"}
+            icon={<FaGithub size={25} />}
+          />
+        </Tooltip>
+      ) : (
+        <></>
+      )}
+      {props.OpenLink ? (
+        <Tooltip
+          openDelay={500}
+          label={props.OpenToolTip}
+          aria-label="A tooltip"
+        >
+          <IconButton
+            as={"a"}
+            colorScheme={"gray"}
+            href={props.OpenLink}
+            target={"_blank"}
+            icon={<Icon as={props.OpenIcon} size={25} />}
+          />
+        </Tooltip>
+      ) : (
+        <></>
+      )}
+    </>
+  );
+}
 
 function PriceWrapper(props, { children }) {
   return (
@@ -46,21 +90,14 @@ function PriceWrapper(props, { children }) {
               {props.Description}
             </Text>
           </Box>
-          <Box pt={3}>
-            <Tooltip
-              openDelay={500}
-              label="Browse the Github Repo"
-              aria-label="A tooltip"
-            >
-              <IconButton
-                as={"a"}
-                colorScheme={"gray"}
-                href={props.GitLink}
-                target={"_blank"}
-                icon={<FaGithub size={25} />}
-              />
-            </Tooltip>
-          </Box>
+          <Stack direction={"row"} pt={3} spacing={5}>
+            <SubIcons
+              GitLink={props.GitLink}
+              OpenLink={props.OpenLink}
+              OpenToolTip={props.OpenToolTip}
+              OpenIcon={props.OpenIcon}
+            />
+          </Stack>
         </VStack>
       </Box>
     </Fade>
@@ -80,32 +117,6 @@ export default function Projects(props) {
       </VStack>
       <Wrap w={"90%"} pt={9} spacing={8} justify="center">
         <PriceWrapper
-          title={"Createev"}
-          Tag={"e-Commerce Concept Site "}
-          Image={<Createev colormode={props.colormode} />}
-          Description={`Developed backend processes for the Createev e-commerce concept
-          site. Utilizing Node.js, Express.js and a MySQL database to
-          serve templated pages for e-commerce.`}
-          GitLink={"https://github.com/KasperLuna/Createev-Concept"}
-        />
-        <PriceWrapper
-          title={"Dealcrafter"}
-          Tag={"Internal Inventory Management"}
-          Image={
-            <Box width="280px" height="280px">
-              <Image
-                alt={"Dealcrafter"}
-                src="/dealcrafter.png"
-                objectFit={"contain"}
-              />
-            </Box>
-          }
-          Description={
-            "Developed backend processes for the internal Dealcrafter site, utilizing Node.js, Express.js, PostgreSQL, and Redis to serve templated pages used for inventory management."
-          }
-          GitLink={"https://github.com/KasperLuna/Dealcrafter"}
-        />
-        <PriceWrapper
           title={"This Site"}
           Tag={"Portfolio Site "}
           Image={<ThisSiteLogo colormode={props.colormode} />}
@@ -113,6 +124,50 @@ export default function Projects(props) {
             "An ongoing project currently using Chakra UI and Next.js to develop React.js skills and other skills related to Frontend development and integrating such with Node.js-based API's."
           }
           GitLink={"https://github.com/KasperLuna/Next-Chakra-Portfolio"}
+          OpenIcon={ExternalLinkIcon}
+          OpenToolTip={"Open in new tab"}
+          OpenLink={"https://kasperluna.com/"}
+        />
+        <PriceWrapper
+          title={"Pain Care"}
+          Tag={"Dental Record Management System"}
+          Image={
+            <Box width="280px" height={"240px"}>
+              <Box mt={"40px"} ml={"38px"}>
+                <FaTooth size={200} />
+              </Box>
+            </Box>
+          }
+          Description={`Developed backend processes for the Pain Care System,
+           utilizing Node.js, Express.js, and PostgreSQL to serve
+           templated pages used for dental record management.`}
+          OpenIcon={ExternalLinkIcon}
+          OpenToolTip={"Open in new tab"}
+          OpenLink={"https://paincare.herokuapp.com/"}
+        />
+        <PriceWrapper
+          title={"Dealcrafter"}
+          Tag={"Internal Inventory Management"}
+          Image={
+            <Image
+              alt={"Dealcrafter"}
+              src="/dealcrafter.png"
+              objectFit={"contain"}
+            />
+          }
+          Description={
+            "Developed backend processes for the internal Dealcrafter site, utilizing Node.js, Express.js, PostgreSQL, and Redis to serve templated pages used for inventory management."
+          }
+          GitLink={"https://github.com/KasperLuna/Dealcrafter"}
+        />
+        <PriceWrapper
+          title={"Createev"}
+          Tag={"e-Commerce Concept Site "}
+          Image={<Createev colormode={props.colormode} />}
+          Description={`Developed backend processes for the Createev e-commerce concept
+          site. Utilizing Node.js, Express.js and a MySQL database to
+          serve templated pages for e-commerce.`}
+          GitLink={"https://github.com/KasperLuna/Createev-Concept"}
         />
       </Wrap>
     </VStack>
