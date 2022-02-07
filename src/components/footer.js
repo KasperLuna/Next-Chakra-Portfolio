@@ -43,7 +43,8 @@ const SocialButton = ({ children, label, href, onClick }) => {
 export default function SmallWithLogoLeft({ colormode }) {
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={useColorModeValue("gray.50", "#1C2F4D")}
+      boxShadow={useColorModeValue("0px -3px 3px rgba(0,0,0,.1)", "")}
       color={useColorModeValue("gray.700", "gray.200")}
       position={"sticky"}
     >

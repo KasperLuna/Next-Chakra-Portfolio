@@ -119,7 +119,11 @@ export default function WithSubnavigation(props) {
   };
 
   return (
-    <Box>
+    <Box
+      boxShadow={4}
+      backgroundColor={useColorModeValue("", "#1C2F4D")}
+      mb={-1}
+    >
       <Flex
         opacity={"none"}
         minH={"60px"}
