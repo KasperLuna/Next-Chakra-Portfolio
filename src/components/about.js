@@ -73,8 +73,9 @@ export default function SplitWithImage() {
             </Text>
             <Heading>Hi, I&apos;m Kasper.</Heading>
             <Text color={"gray.500"} fontSize={"lg"}>
-              Student at the University of Santo Tomas currently in my last year
-              of BS Information Systems, Specializing in Service Management.
+              I&apos;m a student at the University of Santo Tomas currently in
+              my last year of BS Information Systems, specializing in Service
+              Management.
               {/* I&apos;m <b>looking for an Internship</b> starting{" "}
               <b>January 2022.</b> */}
             </Text>
@@ -104,7 +105,7 @@ export default function SplitWithImage() {
                 iconBg={useColorModeValue("purple.100", "purple.900")}
                 title={"Team-Oriented"}
                 description={
-                  "I firmly believe that learning and working closely is the surefire way to become a better worker. I love building things!"
+                  "I firmly believe that learning and working closely with others is the surefire way to become a better worker. I love building things!"
                 }
               />
             </Stack>

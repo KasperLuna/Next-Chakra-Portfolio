@@ -94,7 +94,7 @@ export default function SimpleCard() {
                   <Textarea
                     onChange={(e) => setMessage(e.target.value)}
                     type="text"
-                    placeholder="Good Work, Kasper!"
+                    placeholder="Hi Kasper! I want to discuss a project with you."
                     required
                   />
                 </FormControl>
