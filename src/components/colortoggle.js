@@ -9,6 +9,7 @@ export default function ColorToggle({ colorMode, toggleColorMode }) {
       marginTop="10px"
       marginRight="4px"
       marginBottom="-25px"
+      zIndex={"sticky"}
       sx={{
         position: "-webkit-sticky" /* Safari */,
         position: "sticky",

@@ -11,7 +11,13 @@ export default function ScrollToTop(props) {
 
   return (
     <Fade in={!props.visible}>
-      <Box position={"fixed"} bottom={"10px"} right={"10px"} cursor={"pointer"}>
+      <Box
+        position={"fixed"}
+        bottom={"10px"}
+        right={"10px"}
+        cursor={"pointer"}
+        zIndex={"sticky"}
+      >
         <Flex>
           <Spacer />
           <Tooltip
