@@ -114,6 +114,7 @@ export default function Projects(props) {
       pt={20}
       backgroundImage={useColorModeValue(LIGHT, DARK)}
       backgroundAttachment={"inherit"}
+      backgroundPosition={"center"}
     >
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">

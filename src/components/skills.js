@@ -75,6 +75,7 @@ export default function Skills(props) {
       mb={10}
       backgroundImage={useColorModeValue(LIGHT, DARK)}
       backgroundAttachment={"inherit"}
+      backgroundPosition={"center"}
     >
       <Stack direction={"column"} spacing={2}>
         <Heading as="h1" fontSize="4xl">

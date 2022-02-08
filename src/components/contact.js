@@ -60,6 +60,7 @@ export default function SimpleCard() {
       pb={20}
       backgroundImage={useColorModeValue(LIGHT, DARK)}
       backgroundAttachment={"inherit"}
+      backgroundPosition={"center"}
     >
       <Stack spacing={8} mx={"auto"} maxW={"lg"} px={7}>
         <Stack textAlign={"center"} align={"center"}>
@@ -73,7 +74,7 @@ export default function SimpleCard() {
           </Text>
         </Stack>
         <form onSubmit={handleSubmit}>
-          <Fade in={true} whileHover={{ scale: 1.025 }}>
+          <Fade in={true} whileHover={{ scale: 1.01 }}>
             <Box
               rounded={"lg"}
               bg={useColorModeValue("white", "gray.700")}
