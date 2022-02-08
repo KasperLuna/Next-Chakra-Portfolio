@@ -65,6 +65,12 @@ const Counter = ({ header }) => {
   );
 };
 
+export async function getStaticProps() {
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}
+
 export default function Axie() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [energy, setEnergy] = useState(3);

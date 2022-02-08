@@ -15,7 +15,13 @@ import { ColorModeScript } from "@chakra-ui/react";
 import ColorToggle from "../components/colortoggle.js";
 import ScrollToTop from "../components/scrollToTop.js";
 
-export default function Home() {
+export async function getStaticProps() {
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}
+
+export default function Home({}) {
   const { colorMode, toggleColorMode } = useColorMode();
   const navRef = useRef(null);
   const heroRef = useRef(null);
