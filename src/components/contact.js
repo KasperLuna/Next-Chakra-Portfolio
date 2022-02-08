@@ -74,54 +74,52 @@ export default function SimpleCard() {
           </Text>
         </Stack>
         <form onSubmit={handleSubmit}>
-          <Fade in={true} whileHover={{ scale: 1.01 }}>
-            <Box
-              rounded={"lg"}
-              bg={useColorModeValue("white", "gray.700")}
-              boxShadow={"lg"}
-              p={9}
-            >
-              <Stack spacing={4}>
-                <FormControl id="email">
-                  <FormLabel>Email address</FormLabel>
-                  <Input
-                    onChange={(e) => setName(e.target.value)}
-                    type="email"
-                    placeholder="johndoe@gmail.com"
-                    required
-                  />
-                </FormControl>
-                <FormControl id="name">
-                  <FormLabel>Full Name</FormLabel>
-                  <Input
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="text"
-                    placeholder="John Doe"
-                    required
-                  />
-                </FormControl>
-                <FormControl id="message">
-                  <FormLabel>Message</FormLabel>
-                  <Textarea
-                    onChange={(e) => setMessage(e.target.value)}
-                    type="text"
-                    placeholder="Hi Kasper! I want to discuss a project with you."
-                    required
-                  />
-                </FormControl>
-                <Button
-                  type="submit"
-                  bg={"blue.400"}
-                  color={"white"}
-                  _hover={{
-                    bg: "blue.500",
-                  }}
-                >
-                  Send!
-                </Button>
-              </Stack>
-            </Box>
-          </Fade>
+          <Box
+            rounded={"lg"}
+            bg={useColorModeValue("white", "gray.700")}
+            boxShadow={"lg"}
+            p={9}
+          >
+            <Stack spacing={4}>
+              <FormControl id="email">
+                <FormLabel>Email address</FormLabel>
+                <Input
+                  onChange={(e) => setName(e.target.value)}
+                  type="email"
+                  placeholder="johndoe@gmail.com"
+                  required
+                />
+              </FormControl>
+              <FormControl id="name">
+                <FormLabel>Full Name</FormLabel>
+                <Input
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="text"
+                  placeholder="John Doe"
+                  required
+                />
+              </FormControl>
+              <FormControl id="message">
+                <FormLabel>Message</FormLabel>
+                <Textarea
+                  onChange={(e) => setMessage(e.target.value)}
+                  type="text"
+                  placeholder="Hi Kasper! I want to discuss a project with you."
+                  required
+                />
+              </FormControl>
+              <Button
+                type="submit"
+                bg={"blue.400"}
+                color={"white"}
+                _hover={{
+                  bg: "blue.500",
+                }}
+              >
+                Send!
+              </Button>
+            </Stack>
+          </Box>
           <form
             name="contact"
             netlify="true"
