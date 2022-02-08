@@ -131,11 +131,13 @@ export default function SplitWithImage() {
                 top: 5,
                 backgroundImage: "/face.jpg",
                 filter: "blur(20px)",
+                WebkitBackdropFilter: "blur(20px)",
                 zIndex: -1,
               }}
               _groupHover={{
                 _after: {
                   filter: "blur(35px)",
+                  WebkitBackdropFilter: "blur(35px)",
                 },
               }}
             >
