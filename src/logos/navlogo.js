@@ -1,10 +1,12 @@
-const Logo = ({ colormode, width }) => {
+import { useColorModeValue } from "@chakra-ui/react";
+
+const Logo = ({ width }) => {
   return (
     <>
       <svg
         width={width}
-        stroke={colormode === "light" ? "#000000" : "#FFFFFF"}
-        fill={colormode === "light" ? "#000000" : "#FFFFFF"}
+        stroke={useColorModeValue("#000000", "#FFFFFF")}
+        fill={useColorModeValue("#000000", "#FFFFFF")}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1110 145"
       >

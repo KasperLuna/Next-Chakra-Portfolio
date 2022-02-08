@@ -128,7 +128,7 @@ export default function Projects(props) {
         <PriceWrapper
           title={"This Site"}
           Tag={"Portfolio Site "}
-          Image={<ThisSiteLogo colormode={props.colormode} />}
+          Image={<ThisSiteLogo />}
           Description={
             "An ongoing project currently using Chakra UI and Next.js to develop React.js skills and other skills related to Frontend development and integrating such with Node.js-based API's."
           }
@@ -172,7 +172,7 @@ export default function Projects(props) {
         <PriceWrapper
           title={"Createev"}
           Tag={"e-Commerce Concept Site "}
-          Image={<Createev colormode={props.colormode} />}
+          Image={<Createev />}
           Description={`Developed backend processes for the Createev e-commerce concept
           site. Utilizing Node.js, Express.js and a MySQL database to
           serve templated pages for e-commerce.`}

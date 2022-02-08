@@ -1,10 +1,11 @@
+import { useColorModeValue } from "@chakra-ui/react";
 import styles from "../styles/logo.module.css";
 
-const Luna = ({ colormode }) => {
+const Luna = () => {
   return (
     <>
       <svg
-        stroke={colormode === "light" ? "#000000" : "#FFFFFF"}
+        stroke={useColorModeValue("#000000", "#FFFFFF")}
         viewBox="0 0 490.06 143.3"
       >
         <path

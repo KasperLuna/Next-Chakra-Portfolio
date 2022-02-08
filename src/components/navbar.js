@@ -6,22 +6,13 @@ import {
   Tooltip,
   Stack,
   Collapse,
-  Icon,
   Link,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 
 //Icons
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 //Logo
@@ -151,7 +142,7 @@ export default function WithSubnavigation(props) {
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Box width={"160px"}>
             <Link href={"https://kasperluna.com"}>
-              <Logo colormode={props.colormode} width={"165px"} />
+              <Logo width={"165px"} />
             </Link>
           </Box>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>

@@ -57,7 +57,7 @@ export default function SmallWithLogoLeft({ colormode }) {
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >
-        <Logo colormode={colormode} width={"155px"} />
+        <Logo width={"155px"} />
         <Text>© 2022 Kasper Luna. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
           <Tooltip

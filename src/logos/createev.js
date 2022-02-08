@@ -1,10 +1,11 @@
+import { useColorModeValue } from "@chakra-ui/react";
 import styles from "../styles/svg.module.css";
 
-export default function Createev({ colormode }) {
+export default function Createev() {
   return (
     <svg
-      stroke={colormode === "light" ? "#000000" : "#FFFFFF"}
-      fill={colormode === "light" ? "#000000" : "#FFFFFF"}
+      stroke={useColorModeValue("#000000", "#FFFFFF")}
+      fill={useColorModeValue("#000000", "#FFFFFF")}
       className={styles.svg}
       viewBox="0 0 2048.000000 2048.000000"
     >
