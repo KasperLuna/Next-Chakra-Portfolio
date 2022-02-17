@@ -1,6 +1,6 @@
 # Kasper Luna Personal Portfolio Site
 
-This site is built with [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/), currently deployed via Vercel.
+This site is built with [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/), Currently deployed via Vercel.
 
 ## Run this site locally
 
