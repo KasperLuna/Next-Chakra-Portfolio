@@ -26,6 +26,7 @@ import {
   SiChakraui,
   SiMicrosoftazure,
   SiNetlify,
+  SiVercel,
 } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
 import { FaNode, FaGitAlt } from "react-icons/fa";
@@ -157,6 +158,10 @@ export default function Skills(props) {
           <IconSet
             title="Netlify"
             icon={<SiNetlify size={60} color="#38aeba" />}
+          />
+          <IconSet
+            title="Vercel"
+            icon={<SiVercel size={60} color="#38aeba" />}
           />
         </Wrap>
       </WrapBox>
