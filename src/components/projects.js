@@ -160,7 +160,7 @@ export default function Projects(props) {
           Image={
             <Image
               alt={"Dealcrafter"}
-              src="/dealcrafter.png"
+              src="/dealcrafter.webp"
               objectFit={"contain"}
             />
           }
