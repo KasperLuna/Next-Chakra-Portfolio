@@ -62,18 +62,6 @@ export default function SmallWithLogoLeft({ colormode }) {
         <Stack direction={"row"} spacing={6}>
           <Tooltip
             openDelay={500}
-            label="Follow me on Facebook"
-            aria-label="A tooltip"
-          >
-            <SocialButton
-              label={"Facebook"}
-              href={"https://facebook.com/kasper.luna.1"}
-            >
-              <FaFacebook />
-            </SocialButton>
-          </Tooltip>
-          <Tooltip
-            openDelay={500}
             label="Connect with me on LinkedIn"
             aria-label="A tooltip"
           >
