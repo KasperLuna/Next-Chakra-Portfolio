@@ -136,7 +136,6 @@ const DeploymentSkills = [
   {
     title: "Vercel",
     icon: SiVercel,
-    color: "#38aeba",
     link: "https://vercel.com",
   },
 ];
