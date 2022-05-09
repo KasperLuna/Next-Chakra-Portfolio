@@ -18,7 +18,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 //Logo
 import Logo from "../logos/navlogo";
 
-export default function WithSubnavigation(props) {
+export default function PageNavbar(props) {
   const { isOpen, onToggle } = useDisclosure();
 
   const scrollToRef = (ref) => {
@@ -85,13 +85,13 @@ export default function WithSubnavigation(props) {
     );
   };
 
-  const MobileNavItem = (props) => {
+  const MobileNavItem = (params) => {
     return (
       <Stack spacing={4}>
         <Flex
           py={2}
           as={Link}
-          onClick={() => scrollToRef(props.scroll)}
+          onClick={() => scrollToRef(params.scroll)}
           justify={"space-between"}
           align={"center"}
           _hover={{
@@ -102,7 +102,7 @@ export default function WithSubnavigation(props) {
             fontWeight={600}
             color={useColorModeValue("gray.600", "gray.200")}
           >
-            {props.label}
+            {params.label}
           </Text>
         </Flex>
       </Stack>

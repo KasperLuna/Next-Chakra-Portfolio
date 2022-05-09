@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 //Icon
-import { FaGithub, FaFacebook, FaLinkedin, FaEthereum } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEthereum } from "react-icons/fa";
 
 //Logo
 import Logo from "../logos/navlogo.js";
@@ -40,7 +40,7 @@ const SocialButton = ({ children, label, href, onClick }) => {
   );
 };
 
-export default function SmallWithLogoLeft({ colormode }) {
+export default function PageFooter() {
   return (
     <Box
       bg={useColorModeValue("gray.50", "#1C2F4D")}

@@ -3,7 +3,7 @@ import { Tooltip } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/button";
 import { BsMoon, BsSun } from "react-icons/bs";
 
-export default function ColorToggle({ colorMode, toggleColorMode }) {
+export default function ColorToggleButton({ colorMode, toggleColorMode }) {
   return (
     <Box
       marginTop="10px"
@@ -11,8 +11,7 @@ export default function ColorToggle({ colorMode, toggleColorMode }) {
       marginBottom="-25px"
       zIndex={"sticky"}
       sx={{
-        position: "-webkit-sticky" /* Safari */,
-        position: "sticky",
+        position: ["-webkit-sticky", "sticky"],
         top: "1",
       }}
     >

@@ -1,19 +1,19 @@
 //Components
 import Head from "next/head";
-import Navbar from "../components/navbar.js";
-import Hero from "../components/hero.js";
-import About from "../components/about.js";
-import Skills from "../components/skills.js";
-import Projects from "../components/projects.js";
-import Contact from "../components/contact.js";
-import Footer from "../components/footer.js";
+import Navbar from "../components/PageNavbar";
+import Hero from "../components/HeroSection";
+import About from "../components/AboutSection";
+import Skills from "../components/SkillsSection";
+import Projects from "../components/ProjectsSection";
+import Contact from "../components/ContactSection";
+import Footer from "../components/PageFooter";
 
 import { useColorMode } from "@chakra-ui/color-mode";
 import { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
 import { ColorModeScript } from "@chakra-ui/react";
-import ColorToggle from "../components/colortoggle.js";
-import ScrollToTop from "../components/scrollToTop.js";
+import ColorToggle from "../components/ColorToggleButton";
+import ScrollToTop from "../components/ScrollToTopButton";
 
 export async function getStaticProps() {
   return {
@@ -21,7 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({}) {
+export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
   const navRef = useRef(null);
   const heroRef = useRef(null);

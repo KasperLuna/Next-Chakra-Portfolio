@@ -1,10 +1,9 @@
 import { Box, Flex, Spacer } from "@chakra-ui/layout";
-import { Tooltip } from "@chakra-ui/react";
+import { Tooltip, Fade } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/button";
 import { ChevronUpIcon } from "@chakra-ui/icons";
-import { Fade } from "@chakra-ui/react";
 
-export default function ScrollToTop(props) {
+export default function ScrollToTopButton(props) {
   const scrollToRef = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
