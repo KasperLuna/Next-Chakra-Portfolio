@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   Box,
   Container,
@@ -24,19 +24,18 @@ import {
   NumberInputStepper,
   NumberIncrementStepper,
   NumberDecrementStepper,
+  useClipboard,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon, InfoIcon } from "@chakra-ui/icons";
 import { useDisclosure } from "@chakra-ui/hooks";
 
 //Icons and Logo
 import { GrAdd, GrFormSubtract, GrAddCircle, GrRefresh } from "react-icons/gr";
-import { useState } from "react";
-import { useClipboard } from "@chakra-ui/react";
 import { BiCopy } from "react-icons/bi";
 //Logo
 import Logo from "../logos/navlogo.js";
 import { useColorMode } from "@chakra-ui/color-mode";
-import ColorToggle from "../components/colortoggle.js";
+import ColorToggle from "../components/ColorToggleButton";
 
 const addEnergy = (energy) => {
   return energy === 10 ? 0 : 1;
