@@ -39,7 +39,7 @@ export default function Home() {
         <title>Kasper Luna</title>
         <meta
           name="description"
-          content="I'm Kasper Luna, a software developer based in the Philippines. Experienced in frontend and backend system design, project management, and development."
+          content="I'm Kasper Luna, a software engineer based in the Philippines. Experienced in frontend and backend system design, project management, and development."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

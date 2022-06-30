@@ -53,8 +53,8 @@ export default function HeroSection(props) {
               </Box>
             </Box>
             <Text>
-              <Heading>BS Information Systems Student</Heading>
-              Experienced in Back & Frontend System Design, Project Management,
+              <Heading>Software Engineer</Heading>
+              Experienced in Front & Backend System Design, Project Management,
               and Development.
             </Text>
             <Box>

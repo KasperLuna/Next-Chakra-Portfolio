@@ -73,9 +73,9 @@ export default function AboutSection() {
             </Text>
             <Heading>Hi, I&apos;m Kasper.</Heading>
             <Text color={"gray.500"} fontSize={"lg"}>
-              I&apos;m a student at the University of Santo Tomas currently in
-              my last year of BS Information Systems, specializing in Service
-              Management.
+              I&apos;m a full-stack software engineer based in Manila, and a
+              graduate of B.S. Information Systems, specializing in Service
+              Management at the University of Santo Tomas.
               {/* I&apos;m <b>looking for an Internship</b> starting{" "}
               <b>January 2022.</b> */}
             </Text>
