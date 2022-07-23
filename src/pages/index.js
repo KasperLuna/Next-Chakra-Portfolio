@@ -29,8 +29,12 @@ export default function Home() {
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  const activeHero = useInViewport(heroRef, {
+  const footerRef = useRef(null);
+  const visibleHero = useInViewport(heroRef, {
     rootMargin: "-300px",
+  }).inViewport;
+  const visibleFooter = useInViewport(footerRef, {
+    rootMargin: "-30px",
   }).inViewport;
 
   return (
@@ -58,7 +62,6 @@ export default function Home() {
       <div ref={heroRef}>
         <Hero scrollToAbout={aboutRef} colormode={colorMode} />
       </div>
-
       <div ref={aboutRef}>
         <About />
       </div>
@@ -71,8 +74,14 @@ export default function Home() {
       <div ref={contactRef}>
         <Contact />
       </div>
-      <ScrollToTop visible={activeHero} scrollToTop={navRef} />
-      <Footer colormode={colorMode} />
+      <ScrollToTop
+        visible={visibleHero}
+        bottomDesktop={visibleFooter}
+        scrollToTop={navRef}
+      />
+      <div ref={footerRef}>
+        <Footer colormode={colorMode} />
+      </div>
     </>
   );
 }

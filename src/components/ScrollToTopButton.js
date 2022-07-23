@@ -12,7 +12,7 @@ export default function ScrollToTopButton(props) {
     <Fade in={!props.visible}>
       <Box
         position={"fixed"}
-        bottom={"10px"}
+        bottom={props.bottomDesktop ? { base: "10px", md: "75px" } : "10px"}
         right={"10px"}
         cursor={"pointer"}
         zIndex={"sticky"}
