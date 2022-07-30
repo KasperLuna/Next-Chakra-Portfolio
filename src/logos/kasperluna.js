@@ -7,16 +7,6 @@ export default function Kasperluna() {
       stroke={useColorModeValue("#000000", "#FFFFFF")}
       viewBox="0 0 1144 210.02"
     >
-      <defs>
-        <linearGradient id="Gradient">
-          <stop offset="70%" stopColor="#ffffff" />
-          <stop offset="95%" stopColor="#c5c7c7" />
-        </linearGradient>
-        <linearGradient id="GradientLight">
-          <stop offset="50%" stopColor="#454545" />
-          <stop offset="95%" stopColor="#303030" />
-        </linearGradient>
-      </defs>
       <path
         className={useColorModeValue(styles.letterKLight, styles.letterK)}
         d="M206.36,178.87h-43L118.09,101.6l-27,27.52v49.75H57.89V14.23H91.13V87.34l67.16-73.11H203L141,78.35l44.1,67.83v.12q0,15.27,10.62,25.27a33.63,33.63,0,0,0,10.16,6.57Z"

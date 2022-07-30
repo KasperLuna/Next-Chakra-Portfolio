@@ -105,6 +105,14 @@
   animation: draw 2.4s linear forwards, fillKasperDark ease-in 2.5s forwards;
 }
 
+.mobileBoxStuff {
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  animation: draw 2.4s linear forwards, fillKasperDark ease-in 2.5s forwards;
+}
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
@@ -227,6 +235,14 @@
 .boxStuffLight {
   stroke-dasharray: 2900;
   stroke-dashoffset: 2900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  animation: draw 2.4s linear forwards, fillKasperLight ease-in 2.5s forwards;
+}
+
+.mobileBoxStuffLight {
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
   stroke-width: 2px;
   fill: url("#GradientLight");
   animation: draw 2.4s linear forwards, fillKasperLight ease-in 2.5s forwards;
