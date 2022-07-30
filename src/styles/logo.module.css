@@ -1,23 +1,108 @@
-.kasperLight {
+.letterK {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards, fillKasperDark ease-in 1.6s forwards;
+}
+
+.letterA {
   stroke-dasharray: 900;
   stroke-dashoffset: 900;
   stroke-width: 2px;
-  animation: draw 2.2s linear forwards, fillKasperLight ease-in 2s forwards;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.1s,
+    fillKasperDark ease-in 1.6s forwards 0.1s;
 }
 
-.kasperDark {
+.letterS {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.2s,
+    fillKasperDark ease-in 1.6s forwards 0.2s;
+}
+
+.letterP {
   stroke-dasharray: 900;
   stroke-dashoffset: 900;
   stroke-width: 2px;
-  animation: draw 2.2s linear forwards, fillKasperDark ease-in 2s forwards;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.3s,
+    fillKasperDark ease-in 1.6s forwards 0.3s;
 }
 
-.luna {
-  stroke-dasharray: 800;
+.letterE {
+  stroke-dasharray: 900;
   stroke-dashoffset: 900;
-  stroke-width: 2.5px;
-  fill: none;
-  animation: draw 2.2s linear forwards;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.4s,
+    fillKasperDark ease-in 1.6s forwards 0.4s;
+}
+
+.letterR {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.5s,
+    fillKasperDark ease-in 1.6s forwards 0.5s;
+}
+
+.letterL {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.6s,
+    fillKasperDark ease-in 1.6s forwards 0.6s;
+}
+
+.letterU {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.7s,
+    fillKasperDark ease-in 1.6s forwards 0.7s;
+}
+
+.letterN {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.8s,
+    fillKasperDark ease-in 1.6s forwards 0.8s;
+}
+
+.letterATwo {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.9s,
+    fillKasperDark ease-in 1.6s forwards 0.9s;
+}
+
+.boxStuff {
+  stroke-dasharray: 2900;
+  stroke-dashoffset: 2900;
+  stroke-width: 2px;
+  fill: url("#Gradient");
+  animation: draw 2.4s linear forwards, fillKasperDark ease-in 2.5s forwards;
 }
 
 @keyframes draw {
@@ -26,39 +111,138 @@
   }
 }
 
-@keyframes fillKasperLight {
-  0% {
-    fill: #ffffff;
-  }
-  50% {
-    fill: #ffffff;
-  }
-  100% {
-    fill: #000000;
-  }
-}
-
 @keyframes fillKasperDark {
   0% {
-    fill: #20242c;
+    fill-opacity: 0;
   }
   50% {
-    fill: #20242c;
+    fill-opacity: 0%;
+    stroke-opacity: 80%;
   }
   100% {
-    fill: #ffffff;
+    fill-opacity: 100%;
+    stroke-opacity: 0;
   }
 }
 
-@keyframes fillLuna {
+.letterKLight {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards, fillKasperLight ease-in 1.6s forwards;
+}
+
+.letterALight {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.1s,
+    fillKasperLight ease-in 1.6s forwards 0.1s;
+}
+
+.letterSLight {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.2s,
+    fillKasperLight ease-in 1.6s forwards 0.2s;
+}
+
+.letterPLight {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.3s,
+    fillKasperLight ease-in 1.6s forwards 0.3s;
+}
+
+.letterELight {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.4s,
+    fillKasperLight ease-in 1.6s forwards 0.4s;
+}
+
+.letterRLight {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.5s,
+    fillKasperLight ease-in 1.6s forwards 0.5s;
+}
+
+.letterLLight {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.6s,
+    fillKasperLight ease-in 1.6s forwards 0.6s;
+}
+
+.letterULight {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.7s,
+    fillKasperLight ease-in 1.6s forwards 0.7s;
+}
+
+.letterNLight {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.8s,
+    fillKasperLight ease-in 1.6s forwards 0.8s;
+}
+
+.letterATwoLight {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  fill-opacity: 0;
+  animation: draw 1.2s linear forwards 0.9s,
+    fillKasperLight ease-in 1.6s forwards 0.9s;
+}
+
+.boxStuffLight {
+  stroke-dasharray: 2900;
+  stroke-dashoffset: 2900;
+  stroke-width: 2px;
+  fill: url("#GradientLight");
+  animation: draw 2.4s linear forwards, fillKasperLight ease-in 2.5s forwards;
+}
+
+@keyframes fillKasperLight {
   0% {
-    fill: #ffffff;
+    fill-opacity: 0;
   }
   50% {
-    fill: #ffffff;
+    fill-opacity: 0%;
+    stroke-opacity: 80%;
   }
   100% {
-    fill: #000000;
+    fill-opacity: 100%;
+    stroke-opacity: 0;
   }
 }
 

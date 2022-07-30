@@ -55,7 +55,7 @@ const Feature = ({ title, description, icon, iconBg }) => {
 
 export default function AboutSection() {
   return (
-    <Container maxW={"5xl"} py={12}>
+    <Container maxW={"5xl"} py={5}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Accordion defaultIndex={[1]} allowToggle>
           <Stack spacing={10}>
