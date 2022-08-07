@@ -4,7 +4,7 @@
   stroke-width: 2px;
   fill: url("#Gradient");
   fill-opacity: 0;
-  animation: draw 1.2s linear forwards, fillKasperDark ease-in 1.6s forwards;
+  animation: draw 1.2s linear forwards, fillKasperDark ease-in 1.4s forwards;
 }
 
 .letterA {
@@ -14,7 +14,7 @@
   fill: url("#Gradient");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.1s,
-    fillKasperDark ease-in 1.6s forwards 0.1s;
+    fillKasperDark ease-in 1.4s forwards 0.1s;
 }
 
 .letterS {
@@ -24,7 +24,7 @@
   fill: url("#Gradient");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.2s,
-    fillKasperDark ease-in 1.6s forwards 0.2s;
+    fillKasperDark ease-in 1.4s forwards 0.2s;
 }
 
 .letterP {
@@ -34,7 +34,7 @@
   fill: url("#Gradient");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.3s,
-    fillKasperDark ease-in 1.6s forwards 0.3s;
+    fillKasperDark ease-in 1.4s forwards 0.3s;
 }
 
 .letterE {
@@ -44,7 +44,7 @@
   fill: url("#Gradient");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.4s,
-    fillKasperDark ease-in 1.6s forwards 0.4s;
+    fillKasperDark ease-in 1.4s forwards 0.4s;
 }
 
 .letterR {
@@ -54,7 +54,7 @@
   fill: url("#Gradient");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.5s,
-    fillKasperDark ease-in 1.6s forwards 0.5s;
+    fillKasperDark ease-in 1.4s forwards 0.5s;
 }
 
 .letterL {
@@ -64,7 +64,7 @@
   fill: url("#Gradient");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.6s,
-    fillKasperDark ease-in 1.6s forwards 0.6s;
+    fillKasperDark ease-in 1.4s forwards 0.6s;
 }
 
 .letterU {
@@ -74,7 +74,7 @@
   fill: url("#Gradient");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.7s,
-    fillKasperDark ease-in 1.6s forwards 0.7s;
+    fillKasperDark ease-in 1.4s forwards 0.7s;
 }
 
 .letterN {
@@ -84,7 +84,7 @@
   fill: url("#Gradient");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.8s,
-    fillKasperDark ease-in 1.6s forwards 0.8s;
+    fillKasperDark ease-in 1.4s forwards 0.8s;
 }
 
 .letterATwo {
@@ -94,7 +94,7 @@
   fill: url("#Gradient");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.9s,
-    fillKasperDark ease-in 1.6s forwards 0.9s;
+    fillKasperDark ease-in 1.4s forwards 0.9s;
 }
 
 .boxStuff {
@@ -139,7 +139,7 @@
   stroke-width: 2px;
   fill: url("#GradientLight");
   fill-opacity: 0;
-  animation: draw 1.2s linear forwards, fillKasperLight ease-in 1.6s forwards;
+  animation: draw 1.2s linear forwards, fillKasperLight ease-in 1.4s forwards;
 }
 
 .letterALight {
@@ -149,7 +149,7 @@
   fill: url("#GradientLight");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.1s,
-    fillKasperLight ease-in 1.6s forwards 0.1s;
+    fillKasperLight ease-in 1.4s forwards 0.1s;
 }
 
 .letterSLight {
@@ -159,7 +159,7 @@
   fill: url("#GradientLight");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.2s,
-    fillKasperLight ease-in 1.6s forwards 0.2s;
+    fillKasperLight ease-in 1.4s forwards 0.2s;
 }
 
 .letterPLight {
@@ -169,7 +169,7 @@
   fill: url("#GradientLight");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.3s,
-    fillKasperLight ease-in 1.6s forwards 0.3s;
+    fillKasperLight ease-in 1.4s forwards 0.3s;
 }
 
 .letterELight {
@@ -179,7 +179,7 @@
   fill: url("#GradientLight");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.4s,
-    fillKasperLight ease-in 1.6s forwards 0.4s;
+    fillKasperLight ease-in 1.4s forwards 0.4s;
 }
 
 .letterRLight {
@@ -189,7 +189,7 @@
   fill: url("#GradientLight");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.5s,
-    fillKasperLight ease-in 1.6s forwards 0.5s;
+    fillKasperLight ease-in 1.4s forwards 0.5s;
 }
 
 .letterLLight {
@@ -199,7 +199,7 @@
   fill: url("#GradientLight");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.6s,
-    fillKasperLight ease-in 1.6s forwards 0.6s;
+    fillKasperLight ease-in 1.4s forwards 0.6s;
 }
 
 .letterULight {
@@ -209,7 +209,7 @@
   fill: url("#GradientLight");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.7s,
-    fillKasperLight ease-in 1.6s forwards 0.7s;
+    fillKasperLight ease-in 1.4s forwards 0.7s;
 }
 
 .letterNLight {
@@ -219,7 +219,7 @@
   fill: url("#GradientLight");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.8s,
-    fillKasperLight ease-in 1.6s forwards 0.8s;
+    fillKasperLight ease-in 1.4s forwards 0.8s;
 }
 
 .letterATwoLight {
@@ -229,7 +229,7 @@
   fill: url("#GradientLight");
   fill-opacity: 0;
   animation: draw 1.2s linear forwards 0.9s,
-    fillKasperLight ease-in 1.6s forwards 0.9s;
+    fillKasperLight ease-in 1.4s forwards 0.9s;
 }
 
 .boxStuffLight {
