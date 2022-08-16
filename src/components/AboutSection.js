@@ -19,6 +19,8 @@ import {
 import { GrStackOverflow } from "react-icons/gr";
 import { BsPersonFill } from "react-icons/bs";
 import { RiTeamFill } from "react-icons/ri";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Feature = ({ icon, color, iconBg, title, description }) => {
   return (
@@ -77,6 +79,14 @@ const AboutPoints = [
 ];
 
 export default function AboutSection() {
+  const [xRotation, setXRotation] = useState(0);
+  const [yRotation, setYRotation] = useState(0);
+  const [perspective, setPerspective] = useState(500);
+  const [isTouched, setIsTouched] = useState(false);
+  const width = 470;
+  const height = 547;
+  const hoverEffect = `perspective(${perspective}px) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+
   return (
     <Container maxW={"5xl"} py={5}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
@@ -93,8 +103,25 @@ export default function AboutSection() {
           >
             About Me
           </Text>
-          <Heading>Hi, I&apos;m Kasper.</Heading>
-          <Text color={"gray.500"} fontSize={"lg"}>
+
+          <Heading
+            as={motion.h3}
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-300px" }}
+            transition={{ duration: 3, ease: "ease" }}
+          >
+            Hi, I&apos;m Kasper.
+          </Heading>
+          <Text
+            color={"gray.500"}
+            fontSize={"lg"}
+            as={motion.h3}
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-300px" }}
+            transition={{ duration: 1, ease: "anticipate" }}
+          >
             I&apos;m a full-stack software engineer based in Manila, and a
             graduate of B.S. Information Systems, specializing in Service
             Management at the University of Santo Tomas.
@@ -118,35 +145,46 @@ export default function AboutSection() {
             pos={"relative"}
             zIndex={1}
           >
-            <Box
-              rounded={"lg"}
-              pos={"relative"}
-              _after={{
-                transition: "all .3s ease",
-                content: '""',
-                w: "full",
-                h: "full",
-                pos: "absolute",
-                top: 5,
-                backgroundImage: "/face.jpg",
-                filter: "blur(20px)",
-                WebkitBackdropFilter: "blur(20px)",
-                zIndex: -1,
+            <motion.div
+              onMouseMove={(e) => {
+                setYRotation(
+                  15 * ((e.nativeEvent.offsetX - width / 2) / width)
+                );
+                setXRotation(
+                  -15 * ((e.nativeEvent.offsetY - height / 2) / height)
+                );
+                setPerspective(1000);
+                setIsTouched(true);
               }}
-              _groupHover={{
-                _after: {
-                  filter: "blur(35px)",
-                  WebkitBackdropFilter: "blur(35px)",
-                },
+              onMouseLeave={() => {
+                setYRotation(0);
+                setXRotation(0);
+                setPerspective(500);
               }}
+              whileTap={{ scale: 1, transition: { duration: 0.2 } }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+              animate={!isTouched ? { scale: [1, 0.98, 1.02, 1] } : {}}
+              transition={
+                !isTouched
+                  ? {
+                      duration: 2,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatDelay: 1,
+                    }
+                  : {}
+              }
             >
               <Image
                 rounded={"3xl"}
-                alt={"feature image"}
+                alt={"Kasper in his Graduation toga"}
                 src={"/face.jpg"}
                 objectFit={"cover"}
+                transform={hoverEffect}
+                transition={"box-shadow 0.1s, transform 0.1"}
+                _hover={{ cursor: "pointer" }}
               />
-            </Box>
+            </motion.div>
           </Box>
         </Flex>
       </SimpleGrid>

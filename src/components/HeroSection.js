@@ -7,6 +7,7 @@ import {
   Heading,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 //Icons and Logo
 import { ArrowDownIcon } from "@chakra-ui/icons";
@@ -55,26 +56,55 @@ export default function HeroSection(props) {
             <Box display={{ base: "none", md: "block" }}>
               <Kasperlunarial />
             </Box>
-            <Text>
-              <Heading>Software Engineer</Heading>
-              Experienced in Front & Backend System Design, Project Management,
-              and Development.
-            </Text>
-            <Box>
-              <Button
-                leftIcon={<ArrowDownIcon />}
-                colorScheme={"blue"}
-                bg={"blue.400"}
-                rounded={"full"}
-                px={6}
-                _hover={{
-                  bg: "green.500",
+            <Stack direction={"column"} spacing={"30px"}>
+              <Heading
+                as={motion.h3}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 1, duration: 0.8, ease: "easeIn" },
                 }}
-                onClick={() => scrollToAbout()}
               >
-                More
-              </Button>
-            </Box>
+                {"Software Engineer"}
+              </Heading>
+              <Text
+                as={motion.p}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 1.1, duration: 0.8, ease: "easeIn" },
+                }}
+              >
+                {
+                  " Experienced in Front & Backend System Design, Project Management, and Development."
+                }
+              </Text>
+              <Box
+                as={motion.div}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 1.4, duration: 0.8, ease: "easeIn" },
+                }}
+              >
+                <Button
+                  leftIcon={<ArrowDownIcon />}
+                  colorScheme={"blue"}
+                  bg={"blue.400"}
+                  rounded={"full"}
+                  px={6}
+                  _hover={{
+                    bg: "green.500",
+                  }}
+                  onClick={() => scrollToAbout()}
+                >
+                  More
+                </Button>
+              </Box>
+            </Stack>
           </Stack>
         </Container>
       </Box>
