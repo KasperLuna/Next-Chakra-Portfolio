@@ -10,7 +10,7 @@ import Footer from "../components/PageFooter";
 
 import { useColorMode } from "@chakra-ui/color-mode";
 import { useRef } from "react";
-import { useInViewport } from "react-in-viewport";
+import { useInView } from "framer-motion";
 import { ColorModeScript } from "@chakra-ui/react";
 import ColorToggle from "../components/ColorToggleButton";
 import ScrollToTop from "../components/ScrollToTopButton";
@@ -30,12 +30,8 @@ export default function Home() {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
   const footerRef = useRef(null);
-  const visibleHero = useInViewport(heroRef, {
-    rootMargin: "-300px",
-  }).inViewport;
-  const visibleFooter = useInViewport(footerRef, {
-    rootMargin: "-30px",
-  }).inViewport;
+  const visibleHero = useInView(heroRef, { margin: "-300px" });
+  const visibleFooter = useInView(footerRef, { margin: "-30px" });
 
   return (
     <>
