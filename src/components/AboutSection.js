@@ -1,4 +1,5 @@
 import {
+  chakra,
   Container,
   SimpleGrid,
   Image,
@@ -21,6 +22,11 @@ import { BsPersonFill } from "react-icons/bs";
 import { RiTeamFill } from "react-icons/ri";
 import { useState } from "react";
 import { motion } from "framer-motion";
+// import NextImage from "next/image";
+
+// const CustomImage = chakra(NextImage, {
+//   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
+// });
 
 const Feature = ({ icon, color, iconBg, title, description }) => {
   return (
@@ -178,12 +184,20 @@ export default function AboutSection() {
               <Image
                 rounded={"3xl"}
                 alt={"Kasper in his Graduation toga"}
-                src={"/face.jpg"}
+                src={"/face.webp"}
                 objectFit={"cover"}
                 transform={hoverEffect}
                 transition={"box-shadow 0.1s, transform 0.1"}
                 _hover={{ cursor: "pointer" }}
               />
+              {/* <CustomImage
+                rounded={"3xl"}
+                src={"/face.webp"}
+                width={width}
+                height={height}
+                transform={hoverEffect}
+                _hover={{ cursor: "pointer" }}
+              /> */}
             </motion.div>
           </Box>
         </Flex>
