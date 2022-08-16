@@ -16,13 +16,39 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { AlertIcon } from "@chakra-ui/alert";
-import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
 
 const LIGHT = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.29'%3E%3Cpolygon fill='%23eeefef' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23dedede' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23cdcece' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23bcbdbe' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23abadae' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%239b9c9d' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%238A8C8D' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E")`;
 const DARK = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1900' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%231b2332' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%231c2638' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%231c293f' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%231c2c46' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%231c2f4d' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%231b3355' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%231A365D' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E")`;
 
 export default function ContactSection() {
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM);
+  const [success, setSuccess] = useState(null);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const values = e.target;
+    const { FormName, FormEmail, FormMessage } = values;
+    const Body = JSON.stringify({
+      access_key: "bf0cc727-ffb4-4ea5-90b1-16a7d19e87c0", //TODO REPLACE WITH ENV VARIABLE
+      name: FormName.value,
+      email: FormEmail.value,
+      message: FormMessage.value,
+    });
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: Body,
+    });
+    // .then((res) => res.json())
+    // .then((res) => console.log(res));
+    if (response.ok == true) {
+      setSuccess(true);
+    } else {
+      setSuccess(false);
+    }
+  };
 
   return (
     <Flex
@@ -53,35 +79,30 @@ export default function ContactSection() {
             p={9}
           >
             <Stack spacing={4}>
-              <FormControl id="email">
+              <FormControl id="FormEmail">
                 <FormLabel>Email address</FormLabel>
                 <Input
-                  type="email"
+                  type="Email"
                   placeholder="johndoe@gmail.com"
-                  name="email"
+                  name="FormEmail"
                   required
                 />
-                <ValidationError
-                  prefix="Email"
-                  field="email"
-                  errors={state.errors}
-                />
               </FormControl>
-              <FormControl id="name">
+              <FormControl id="FormName">
                 <FormLabel>Full Name</FormLabel>
                 <Input
                   type="text"
                   placeholder="John Doe"
-                  name="name"
+                  name="FormName"
                   required
                 />
               </FormControl>
-              <FormControl id="message">
+              <FormControl id="FormMessage">
                 <FormLabel>Message</FormLabel>
                 <Textarea
                   type="text"
                   placeholder="Hi Kasper! I want to discuss a project with you."
-                  name="message"
+                  name="FormMessage"
                   required
                 />
               </FormControl>
@@ -97,8 +118,7 @@ export default function ContactSection() {
               </Button>
             </Stack>
           </Box>
-          <ValidationError errors={state.errors} />
-          {state.succeeded ? (
+          {success ? (
             <Alert status="success">
               <AlertIcon />
               <Box flex="1">
