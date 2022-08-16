@@ -114,7 +114,7 @@ export default function AboutSection() {
             as={motion.h3}
             initial={{ opacity: 0, y: -40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-300px" }}
+            // viewport={{ once: true, margin: "-300px" }}
             transition={{ duration: 3, ease: "ease" }}
           >
             Hi, I&apos;m Kasper.
@@ -125,7 +125,7 @@ export default function AboutSection() {
             as={motion.h3}
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-300px" }}
+            // viewport={{ once: true, margin: "-300px" }}
             transition={{ duration: 1, ease: "anticipate" }}
           >
             I&apos;m a full-stack software engineer based in Manila, and a
