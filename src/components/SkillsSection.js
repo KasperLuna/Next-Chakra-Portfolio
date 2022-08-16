@@ -27,6 +27,7 @@ import {
   SiMicrosoftazure,
   SiNetlify,
   SiVercel,
+  SiFramer,
 } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
 import { FaNode, FaGitAlt } from "react-icons/fa";
@@ -69,6 +70,11 @@ const FrontendSkills = [
     icon: SiMaterialui,
     color: "#007fff",
     link: "https://mui.com",
+  },
+  {
+    title: "Framer Motion",
+    icon: SiFramer,
+    link: "https://www.framer.com/",
   },
 ];
 
