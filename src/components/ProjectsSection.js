@@ -8,10 +8,10 @@ import {
   IconButton,
   Tooltip,
   Image,
-  Fade,
   Wrap,
   Icon,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { FaGithub, FaTooth } from "react-icons/fa";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -65,7 +65,21 @@ function SubIcons(props) {
 
 function ProjectWrapper(props) {
   return (
-    <Fade in={true} whileHover={{ scale: 1.05 }}>
+    <motion.div
+      initial={{ opacity: 0.1, y: -50, rotateZ: -4 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        rotateZ: 0,
+        transition: {
+          delay: props.delay + 0.15,
+          duration: 2,
+          ease: "anticipate",
+        },
+      }}
+      viewport={{ once: true, margin: "-90px" }}
+      whileHover={{ scale: 1.05 }}
+    >
       <Box
         mb={4}
         maxW={"s"}
@@ -104,7 +118,7 @@ function ProjectWrapper(props) {
           </Stack>
         </VStack>
       </Box>
-    </Fade>
+    </motion.div>
   );
 }
 
@@ -125,60 +139,73 @@ export default function ProjectsSection(_props) {
         </Text>
       </VStack>
       <Wrap w={"90%"} pt={9} spacing={8} justify="center">
-        <ProjectWrapper
-          title={"This Site"}
-          Tag={"Portfolio Site "}
-          Image={<ThisSiteLogo />}
-          Description={
-            "An ongoing project currently using Chakra UI and Next.js to develop React.js skills and other skills related to Frontend development and integrating such with Node.js-based API's."
-          }
-          GitLink={"https://github.com/KasperLuna/Next-Chakra-Portfolio"}
-          OpenIcon={ExternalLinkIcon}
-          OpenToolTip={"Open in new tab"}
-          OpenLink={"https://kasperluna.com/"}
-        />
-        <ProjectWrapper
-          title={"Pain Care"}
-          Tag={"Dental Record Management System"}
-          Image={
-            <Box width="280px" height={"240px"}>
-              <Box mt={"40px"} ml={"38px"}>
-                <FaTooth size={200} />
-              </Box>
-            </Box>
-          }
-          Description={`Developed backend processes for the Pain Care System,
-           utilizing Node.js, Express.js, and PostgreSQL to serve
-           templated pages used for dental record management.`}
-          OpenIcon={ExternalLinkIcon}
-          OpenToolTip={"Open in new tab"}
-          OpenLink={"https://paincare.herokuapp.com/"}
-        />
-        <ProjectWrapper
-          title={"Dealcrafter"}
-          Tag={"Internal Inventory Management"}
-          Image={
-            <Image
-              alt={"Dealcrafter"}
-              src="/dealcrafter.webp"
-              objectFit={"contain"}
-            />
-          }
-          Description={
-            "Developed backend processes for the internal Dealcrafter site, utilizing Node.js, Express.js, PostgreSQL, and Redis to serve templated pages used for inventory management."
-          }
-          GitLink={"https://github.com/KasperLuna/Dealcrafter"}
-        />
-        <ProjectWrapper
-          title={"Createev"}
-          Tag={"e-Commerce Concept Site "}
-          Image={<Createev />}
-          Description={`Developed backend processes for the Createev e-commerce concept
-          site. Utilizing Node.js, Express.js and a MySQL database to
-          serve templated pages for e-commerce.`}
-          GitLink={"https://github.com/KasperLuna/Createev-Concept"}
-        />
+        {Projects.map((project, index) => (
+          <ProjectWrapper
+            key={index}
+            title={project.title}
+            delay={index * 0.1}
+            Tag={project.Tag}
+            Description={project.description}
+            GitLink={project.gitLink}
+            OpenLink={project.openLink}
+            OpenToolTip={project.openToolTip}
+            OpenIcon={project.openIcon}
+            Image={project.image}
+          />
+        ))}
       </Wrap>
     </VStack>
   );
 }
+
+const Projects = [
+  {
+    title: "This Site",
+    Tag: "Portfolio Site",
+    image: <ThisSiteLogo />,
+    description:
+      "An ongoing project currently using Chakra UI and Next.js to develop React.js skills and other skills related to Frontend development and integrating such with Node.js-based API's.",
+    gitLink: "https://github.com/KasperLuna/Next-Chakra-Portfolio",
+    openIcon: ExternalLinkIcon,
+    openToolTip: "Open in new tab",
+    openLink: "https://kasperluna.com/",
+  },
+  {
+    title: "Pain Care",
+    Tag: "Dental Record Management System",
+    image: (
+      <Box width="280px" height={"240px"}>
+        <Box mt={"40px"} ml={"38px"}>
+          <FaTooth size={200} />
+        </Box>
+      </Box>
+    ),
+    description:
+      "Developed backend processes for the Pain Care System, utilizing Node.js, Express.js, and PostgreSQL to serve templated pages used for dental record management.",
+    openIcon: ExternalLinkIcon,
+    openToolTip: "Open in new tab",
+    openLink: "https://paincare.herokuapp.com/",
+  },
+  {
+    title: "Dealcrafter",
+    Tag: "Internal Inventory Management",
+    image: (
+      <Image
+        alt={"Dealcrafter"}
+        src="/dealcrafter.webp"
+        objectFit={"contain"}
+      />
+    ),
+    description:
+      "Developed backend processes for the internal Dealcrafter site, utilizing Node.js, Express.js, PostgreSQL, and Redis to serve templated pages used for inventory management.",
+    gitLink: "https://github.com/KasperLuna/Dealcrafter",
+  },
+  {
+    title: "Createev",
+    Tag: "e-Commerce Concept Site",
+    image: <Createev />,
+    description:
+      "Developed backend processes for the Createev e-commerce concept site. Utilizing Node.js, Express.js and a MySQL database to serve templated pages for e-commerce.",
+    gitLink: "https://github.com/KasperLuna/Createev-Concept",
+  },
+];
