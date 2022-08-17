@@ -113,9 +113,12 @@ export default function AboutSection() {
           <Heading
             as={motion.h3}
             initial={{ opacity: 0, y: -40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            // viewport={{ once: true, margin: "-300px" }}
-            transition={{ duration: 3, ease: "ease" }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, ease: "anticipate" },
+            }}
+            viewport={{ once: true, margin: "-195px" }}
           >
             Hi, I&apos;m Kasper.
           </Heading>
@@ -124,9 +127,12 @@ export default function AboutSection() {
             fontSize={"lg"}
             as={motion.h3}
             initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            // viewport={{ once: true, margin: "-300px" }}
-            transition={{ duration: 1, ease: "anticipate" }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, ease: "anticipate" },
+            }}
+            viewport={{ once: true, margin: "-195px" }}
           >
             I&apos;m a full-stack software engineer based in Manila, and a
             graduate of B.S. Information Systems, specializing in Service
