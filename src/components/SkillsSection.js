@@ -6,10 +6,10 @@ import {
   Tooltip,
   useColorModeValue,
   Wrap,
-  Fade,
   VStack,
   Link,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 import { AiFillHtml5, AiOutlineGithub } from "react-icons/ai";
 import { DiCss3, DiGoogleCloudPlatform } from "react-icons/di";
@@ -146,6 +146,21 @@ const DeploymentSkills = [
   },
 ];
 
+const AllSkills = [
+  {
+    title: "Frontend",
+    array: FrontendSkills,
+  },
+  {
+    title: "Backend",
+    array: BackendSkills,
+  },
+  {
+    title: "Deployment",
+    array: DeploymentSkills,
+  },
+];
+
 function SkillIcon(props) {
   return (
     <Tooltip
@@ -158,9 +173,18 @@ function SkillIcon(props) {
   );
 }
 
-function SkillGroup({ title, array }) {
+function SkillGroup({ title, array, delay }) {
   return (
-    <Fade in={true} whileHover={{ scale: 1.05 }}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.8, ease: "anticipate" },
+      }}
+      viewport={{ once: true, margin: "-150px" }}
+      whileHover={{ scale: 1.05 }}
+    >
       <Box
         mt={5}
         p={3}
@@ -181,18 +205,30 @@ function SkillGroup({ title, array }) {
           <Wrap justify="center" spacing="30px">
             {array.map((skill, index) => {
               return (
-                <Link key={index} href={skill.link} target="_blank">
-                  <SkillIcon
-                    title={skill.title}
-                    icon={<skill.icon size={60} color={skill.color} />}
-                  />
-                </Link>
+                <motion.div
+                  key={index}
+                  animate={{ scale: [null, 0.95, 1.15, 0.98, 1] }}
+                  transition={{
+                    delay: delay + index * 0.1,
+                    duration: 2,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    repeatDelay: delay * 0.1 + 2,
+                  }}
+                >
+                  <Link href={skill.link} target="_blank">
+                    <SkillIcon
+                      title={skill.title}
+                      icon={<skill.icon size={60} color={skill.color} />}
+                    />
+                  </Link>
+                </motion.div>
               );
             })}
           </Wrap>
         </Stack>
       </Box>
-    </Fade>
+    </motion.div>
   );
 }
 
@@ -214,9 +250,16 @@ export default function SkillsSection(_props) {
           Here&apos;s some of the tricks I&apos;ve picked up along the way.
         </Text>
       </Stack>
-      <SkillGroup maxW={"lg"} array={FrontendSkills} title="Frontend" />
-      <SkillGroup maxW={"lg"} array={BackendSkills} title="Backend" />
-      <SkillGroup maxW={"lg"} array={DeploymentSkills} title="Deployment" />
+      {AllSkills.map((group, index) => {
+        return (
+          <SkillGroup
+            key={index}
+            title={group.title}
+            array={group.array}
+            delay={index}
+          />
+        );
+      })}
     </VStack>
   );
 }
