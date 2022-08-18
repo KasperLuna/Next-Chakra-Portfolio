@@ -18,7 +18,7 @@ export default function ScrollToTopButton(props) {
           <Spacer />
           <Tooltip
             label="Scroll Back to Top"
-            aria-label="A tooltip"
+            aria-label="Tooltip for Scrolling back to Top"
             placement={"left"}
             openDelay={500}
           >
@@ -29,6 +29,7 @@ export default function ScrollToTopButton(props) {
               variant="solid"
               colorScheme={"gray"}
               icon={<ChevronUpIcon boxSize={30} />}
+              aria-label="Scroll Back to Top"
             />
           </Tooltip>
         </Flex>

@@ -41,7 +41,7 @@ export default function ContactSection() {
       },
       body: Body,
     });
-    if (response.ok == true) {
+    if (Boolean(response.ok)) {
       setSuccess(true);
     } else {
       setSuccess(false);

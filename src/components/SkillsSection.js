@@ -166,9 +166,9 @@ function SkillIcon(props) {
     <Tooltip
       openDelay={200}
       label={props.title}
-      aria-label={`icon for ${props.title}`}
+      aria-label={`Tooltip for ${props.title}`}
     >
-      <Box>{props.icon}</Box>
+      <Box aria-label={`Icon for ${props.title}`}>{props.icon}</Box>
     </Tooltip>
   );
 }

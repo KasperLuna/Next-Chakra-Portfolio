@@ -19,12 +19,9 @@ export default function ColorToggleButton() {
     >
       <Flex>
         <Spacer />
-        <Tooltip
-          label="Toggle site colors"
-          aria-label="A tooltip"
-          openDelay={500}
-        >
+        <Tooltip aria-label="A tooltip" openDelay={500}>
           <IconButton
+            label="Toggle site colors"
             borderRadius={20}
             variant="solid"
             colorScheme={"gray"}

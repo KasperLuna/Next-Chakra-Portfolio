@@ -29,13 +29,14 @@ function SubIcons(props) {
         <Tooltip
           openDelay={500}
           label="Browse the Github Repo"
-          aria-label="A tooltip"
+          aria-label={`Tooltip for opening Github Repo for ${props.title}`}
         >
           <IconButton
             as={"a"}
             colorScheme={"gray"}
             href={props.GitLink}
             target={"_blank"}
+            aria-label={`Open Github Repo for ${props.title}`}
             icon={<FaGithub size={25} />}
           />
         </Tooltip>
@@ -46,13 +47,14 @@ function SubIcons(props) {
         <Tooltip
           openDelay={500}
           label={props.OpenToolTip}
-          aria-label="A tooltip"
+          aria-label={`Tooltip for opening ${props.title} in a new tab`}
         >
           <IconButton
             as={"a"}
             colorScheme={"gray"}
             href={props.OpenLink}
             target={"_blank"}
+            aria-label={`Open ${props.title} in a new tab`}
             icon={<Icon as={props.OpenIcon} size={25} />}
           />
         </Tooltip>

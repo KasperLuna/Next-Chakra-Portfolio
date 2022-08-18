@@ -63,7 +63,7 @@ export default function PageFooter() {
           <Tooltip
             openDelay={500}
             label="Connect with me on LinkedIn"
-            aria-label="A tooltip"
+            aria-label="Tooltip for LinkedIn"
           >
             <SocialButton
               label={"LinkedIn"}
@@ -75,7 +75,7 @@ export default function PageFooter() {
           <Tooltip
             openDelay={500}
             label="Check out my Github"
-            aria-label="A tooltip"
+            aria-label="Tooltip for Kasper's Github Link"
           >
             <SocialButton
               label={"Github"}
@@ -87,7 +87,7 @@ export default function PageFooter() {
           <Tooltip
             openDelay={500}
             label="Open Axie Energy Counter"
-            aria-label="A tooltip"
+            aria-label="Tooltop for Opening Axie Energy Counter"
           >
             <SocialButton
               onClick={() =>

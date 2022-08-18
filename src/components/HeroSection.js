@@ -45,10 +45,17 @@ export default function HeroSection() {
               </linearGradient>
             </defs>
           </svg>
-          <Box display={{ base: "block", md: "none" }} mt={-10}>
+          <Box
+            display={{ base: "block", md: "none" }}
+            mt={-10}
+            aria-label={"KasperLuna Logo"}
+          >
             <KasperlunaStack />
           </Box>
-          <Box display={{ base: "none", md: "block" }}>
+          <Box
+            display={{ base: "none", md: "block" }}
+            aria-label={"KasperLuna Logo"}
+          >
             <Kasperlunarial />
           </Box>
           <Stack direction={"column"} spacing={"30px"}>

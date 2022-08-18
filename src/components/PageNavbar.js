@@ -19,11 +19,13 @@ const NavItems = ["About", "Skills", "Projects", "Contact"];
 const ButtonLinks = [
   {
     icon: <FaLinkedin size={25} />,
+    ariaLabel: "Linkedin Link",
     label: "Connect with me on LinkedIn!",
     link: "https://www.linkedin.com/in/kasperluna/",
   },
   {
     icon: <FaGithub size={25} />,
+    ariaLabel: "Github Link",
     label: "Check out my GitHub!",
     link: "https://github.com/KasperLuna",
   },
@@ -125,9 +127,9 @@ export default function PageNavbar() {
           {ButtonLinks.map((item) => (
             <>
               <Tooltip
+                aria-label={`Tooltop for ${ariaLabel}`}
                 openDelay={500}
                 label={item.label}
-                aria-label="A tooltip"
               >
                 <IconButton
                   as={"a"}
@@ -135,6 +137,7 @@ export default function PageNavbar() {
                   href={item.link}
                   target={"_blank"}
                   icon={item.icon}
+                  aria-label={item.ariaLabel}
                 />
               </Tooltip>
             </>

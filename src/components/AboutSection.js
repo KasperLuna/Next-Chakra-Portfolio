@@ -23,7 +23,6 @@ import { RiTeamFill } from "react-icons/ri";
 import { useState } from "react";
 import { motion } from "framer-motion";
 // import NextImage from "next/image";
-
 // const CustomImage = chakra(NextImage, {
 //   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 // });
