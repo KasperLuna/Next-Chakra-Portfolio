@@ -98,7 +98,7 @@ export default function AboutSection() {
         <Stack spacing={10}>
           <Text
             textTransform={"uppercase"}
-            color={"blue.400"}
+            color={useColorModeValue("blue.600", "blue.200")}
             fontWeight={600}
             fontSize={"sm"}
             bg={useColorModeValue("blue.50", "blue.900")}
@@ -122,7 +122,7 @@ export default function AboutSection() {
             Hi, I&apos;m Kasper.
           </Heading>
           <Text
-            color={"gray.500"}
+            color={useColorModeValue("gray.600", "gray.400")}
             fontSize={"lg"}
             as={motion.h3}
             initial={{ opacity: 0, y: -50 }}

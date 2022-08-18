@@ -106,7 +106,10 @@ function ProjectWrapper(props) {
           borderBottomRadius={"xl"}
         >
           <Box w={60}>
-            <Text color={"gray.500"} fontSize={"md"}>
+            <Text
+              color={useColorModeValue("gray.600", "gray.300")}
+              fontSize={"md"}
+            >
               {props.Description}
             </Text>
           </Box>
