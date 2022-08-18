@@ -73,11 +73,11 @@ function ProjectWrapper(props) {
         rotateZ: 0,
         transition: {
           delay: props.delay + 0.15,
-          duration: 2,
+          duration: 1,
           ease: "anticipate",
         },
       }}
-      viewport={{ once: true, margin: "-90px" }}
+      viewport={{ once: true, margin: "-40px" }}
       whileHover={{ scale: 1.05 }}
     >
       <Box
