@@ -94,7 +94,11 @@ export default function AboutSection() {
 
   return (
     <Container id={"About"} maxW={"5xl"} mt={{ lg: 12, xl: 12 }} py={5}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+      <SimpleGrid
+        columns={{ base: 1, md: 2 }}
+        spacing={10}
+        justifyItems={"center"}
+      >
         <Stack spacing={10}>
           <Text
             textTransform={"uppercase"}
