@@ -127,7 +127,7 @@ export default function PageNavbar() {
           {ButtonLinks.map((item) => (
             <>
               <Tooltip
-                aria-label={`Tooltop for ${ariaLabel}`}
+                aria-label={`Tooltip for ${item.ariaLabel}`}
                 openDelay={500}
                 label={item.label}
               >
