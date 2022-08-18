@@ -8,7 +8,6 @@ import Projects from "../components/ProjectsSection";
 import Contact from "../components/ContactSection";
 import Footer from "../components/PageFooter";
 
-import { useColorMode } from "@chakra-ui/color-mode";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { ColorModeScript } from "@chakra-ui/react";
@@ -22,13 +21,7 @@ export async function getStaticProps() {
 }
 
 export default function Home() {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const navRef = useRef(null);
   const heroRef = useRef(null);
-  const aboutRef = useRef(null);
-  const skillsRef = useRef(null);
-  const projectsRef = useRef(null);
-  const contactRef = useRef(null);
   const footerRef = useRef(null);
   const visibleHero = useInView(heroRef, { margin: "-300px" });
   const visibleFooter = useInView(footerRef, { margin: "-30px" });
@@ -43,40 +36,20 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <ColorModeScript initialColorMode="dark" />
-      <div ref={navRef}>
-        <Navbar
-          scrollToAbout={aboutRef}
-          scrollToSkills={skillsRef}
-          scrollToProjects={projectsRef}
-          scrollToContact={contactRef}
-          colormode={colorMode}
-        />
-      </div>
-      <ColorToggle colorMode={colorMode} toggleColorMode={toggleColorMode} />
+
+      <Navbar />
+      <ColorToggle />
       <div ref={heroRef}>
-        <Hero scrollToAbout={aboutRef} colormode={colorMode} />
+        <Hero />
       </div>
-      <div ref={aboutRef}>
-        <About />
-      </div>
-      <div ref={skillsRef}>
-        <Skills />
-      </div>
-      <div ref={projectsRef}>
-        <Projects colormode={colorMode} />
-      </div>
-      <div ref={contactRef}>
-        <Contact />
-      </div>
-      <ScrollToTop
-        visible={visibleHero}
-        bottomDesktop={visibleFooter}
-        scrollToTop={navRef}
-      />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <ScrollToTop visible={visibleHero} bottomDesktop={visibleFooter} />
       <div ref={footerRef}>
-        <Footer colormode={colorMode} />
+        <Footer />
       </div>
     </>
   );

@@ -41,8 +41,6 @@ export default function ContactSection() {
       },
       body: Body,
     });
-    // .then((res) => res.json())
-    // .then((res) => console.log(res));
     if (response.ok == true) {
       setSuccess(true);
     } else {
@@ -52,6 +50,7 @@ export default function ContactSection() {
 
   return (
     <Flex
+      id={"Contact"}
       align={"center"}
       justify={"center"}
       pt={20}

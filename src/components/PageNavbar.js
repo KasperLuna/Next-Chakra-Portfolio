@@ -15,31 +15,22 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-export default function PageNavbar(props) {
+const NavItems = ["About", "Skills", "Projects", "Contact"];
+const ButtonLinks = [
+  {
+    icon: <FaLinkedin size={25} />,
+    label: "Connect with me on LinkedIn!",
+    link: "https://www.linkedin.com/in/kasperluna/",
+  },
+  {
+    icon: <FaGithub size={25} />,
+    label: "Check out my GitHub!",
+    link: "https://github.com/KasperLuna",
+  },
+];
+
+export default function PageNavbar() {
   const { isOpen, onToggle } = useDisclosure();
-
-  const scrollToRef = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const NAV_ITEMS = [
-    {
-      label: "About",
-      scroll: props.scrollToAbout,
-    },
-    {
-      label: "Skills",
-      scroll: props.scrollToSkills,
-    },
-    {
-      label: "Projects",
-      scroll: props.scrollToProjects,
-    },
-    {
-      label: "Contact",
-      scroll: props.scrollToContact,
-    },
-  ];
 
   const DesktopNav = () => {
     const linkColor = useColorModeValue("gray.500", "gray.200");
@@ -47,27 +38,27 @@ export default function PageNavbar(props) {
 
     return (
       <Stack direction={"row"} spacing={4}>
-        {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
+        {NavItems.map((navItem) => (
+          <Box key={navItem}>
             <Link
               p={2}
-              onClick={() => scrollToRef(navItem.scroll)}
+              //onClick={() => scrollToRef(navItem.scroll)}
               fontSize={"sm"}
               fontWeight={500}
               color={linkColor}
+              href={`#${navItem}`}
               _hover={{
                 textDecoration: "none",
                 color: linkHoverColor,
               }}
             >
-              {navItem.label}
+              {navItem}
             </Link>
           </Box>
         ))}
       </Stack>
     );
   };
-
   const MobileNav = () => {
     return (
       <Stack
@@ -75,23 +66,24 @@ export default function PageNavbar(props) {
         p={4}
         display={{ md: "none" }}
       >
-        {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
+        {NavItems.map((navItem) => (
+          <MobileNavItem key={navItem} value={navItem} />
         ))}
       </Stack>
     );
   };
-
   const MobileNavItem = (params) => {
+    const { value } = params;
     return (
       <Stack spacing={4}>
         <Flex
           py={2}
           as={Link}
-          onClick={() => scrollToRef(params.scroll)}
+          //onClick={() => scrollToRef(params.scroll)}
           justify={"space-between"}
           align={"center"}
           justifyContent={"end"}
+          href={`#${value}`}
           _hover={{
             textDecoration: "none",
           }}
@@ -100,7 +92,7 @@ export default function PageNavbar(props) {
             fontWeight={600}
             color={useColorModeValue("gray.600", "gray.200")}
           >
-            {params.label}
+            {value}
           </Text>
         </Flex>
       </Stack>
@@ -109,6 +101,7 @@ export default function PageNavbar(props) {
 
   return (
     <Box
+      id={"top"}
       boxShadow={4}
       backgroundColor={useColorModeValue("", "#1C2F4D")}
       mb={-1}
@@ -129,36 +122,27 @@ export default function PageNavbar(props) {
           direction={"row"}
           spacing={[4, 4, 4, 4]}
         >
-          <Tooltip
-            openDelay={500}
-            label="Connect with me on LinkedIn!"
-            aria-label="A tooltip"
-          >
-            <IconButton
-              as={"a"}
-              colorScheme={"gray"}
-              href={"https://www.linkedin.com/in/kasperluna/"}
-              target={"_blank"}
-              icon={<FaLinkedin size={25} />}
-            />
-          </Tooltip>
-          <Tooltip
-            openDelay={500}
-            label="Check out my Github!"
-            aria-label="A tooltip"
-          >
-            <IconButton
-              as={"a"}
-              colorScheme={"gray"}
-              href={"https://github.com/KasperLuna"}
-              target={"_blank"}
-              icon={<FaGithub size={25} />}
-            />
-          </Tooltip>
+          {ButtonLinks.map((item) => (
+            <>
+              <Tooltip
+                openDelay={500}
+                label={item.label}
+                aria-label="A tooltip"
+              >
+                <IconButton
+                  as={"a"}
+                  colorScheme={"gray"}
+                  href={item.link}
+                  target={"_blank"}
+                  icon={item.icon}
+                />
+              </Tooltip>
+            </>
+          ))}
         </Stack>
         <Flex flex={{ base: 1 }} justify={{ base: "end", md: "end" }}>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav scroll={scrollToRef} />
+            <DesktopNav />
           </Flex>
         </Flex>
         <Flex

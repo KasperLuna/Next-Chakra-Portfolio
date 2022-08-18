@@ -2,8 +2,10 @@ import { Box, Flex, Spacer } from "@chakra-ui/layout";
 import { Tooltip } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/button";
 import { BsMoon, BsSun } from "react-icons/bs";
+import { useColorMode } from "@chakra-ui/color-mode";
 
-export default function ColorToggleButton({ colorMode, toggleColorMode }) {
+export default function ColorToggleButton() {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Box
       marginTop="10px"

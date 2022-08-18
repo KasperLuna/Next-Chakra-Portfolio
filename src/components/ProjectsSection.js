@@ -122,9 +122,10 @@ function ProjectWrapper(props) {
   );
 }
 
-export default function ProjectsSection(_props) {
+export default function ProjectsSection() {
   return (
     <VStack
+      id={"Projects"}
       pt={20}
       backgroundImage={useColorModeValue(LIGHT, DARK)}
       backgroundAttachment={"inherit"}

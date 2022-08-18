@@ -1,5 +1,5 @@
 import {
-  chakra,
+  //chakra,
   Container,
   SimpleGrid,
   Image,
@@ -94,7 +94,7 @@ export default function AboutSection() {
   const hoverEffect = `perspective(${perspective}px) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
 
   return (
-    <Container maxW={"5xl"} py={5}>
+    <Container id={"About"} maxW={"5xl"} mt={{ lg: 12, xl: 12 }} py={5}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={10}>
           <Text

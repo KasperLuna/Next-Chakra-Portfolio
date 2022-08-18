@@ -232,15 +232,16 @@ function SkillGroup({ title, array, delay }) {
   );
 }
 
-export default function SkillsSection(_props) {
+export default function SkillsSection() {
   return (
     <VStack
+      id={"Skills"}
       textAlign={"center"}
       pt={20}
       mb={10}
       backgroundImage={useColorModeValue(LIGHT, DARK)}
       backgroundAttachment={"inherit"}
-      backgroundPosition={"center"}
+      backgroundPosition={"bottom"}
     >
       <Stack direction={"column"} spacing={2}>
         <Heading as="h1" fontSize="4xl">
