@@ -197,6 +197,8 @@ const Projects = [
         alt={"Dealcrafter"}
         src="/dealcrafter.webp"
         objectFit={"contain"}
+        width={"280px"}
+        height={"280px"}
       />
     ),
     description:

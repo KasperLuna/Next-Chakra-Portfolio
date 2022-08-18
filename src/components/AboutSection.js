@@ -192,6 +192,8 @@ export default function AboutSection() {
                 src={"/face.webp"}
                 objectFit={"cover"}
                 transform={hoverEffect}
+                width={width}
+                height={height}
                 transition={"box-shadow 0.1s, transform 0.1"}
                 _hover={{ cursor: "pointer" }}
               />
