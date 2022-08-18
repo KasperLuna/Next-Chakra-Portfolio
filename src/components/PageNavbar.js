@@ -125,22 +125,21 @@ export default function PageNavbar() {
           spacing={[4, 4, 4, 4]}
         >
           {ButtonLinks.map((item) => (
-            <>
-              <Tooltip
-                aria-label={`Tooltip for ${item.ariaLabel}`}
-                openDelay={500}
-                label={item.label}
-              >
-                <IconButton
-                  as={"a"}
-                  colorScheme={"gray"}
-                  href={item.link}
-                  target={"_blank"}
-                  icon={item.icon}
-                  aria-label={item.ariaLabel}
-                />
-              </Tooltip>
-            </>
+            <Tooltip
+              key={item.ariaLabel}
+              aria-label={`Tooltip for ${item.ariaLabel}`}
+              openDelay={500}
+              label={item.label}
+            >
+              <IconButton
+                as={"a"}
+                colorScheme={"gray"}
+                href={item.link}
+                target={"_blank"}
+                icon={item.icon}
+                aria-label={item.ariaLabel}
+              />
+            </Tooltip>
           ))}
         </Stack>
         <Flex flex={{ base: 1 }} justify={{ base: "end", md: "end" }}>
