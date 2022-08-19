@@ -1,100 +1,11 @@
-.letterK {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 900;
+.letters {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
   stroke-width: 2px;
   fill: url("#Gradient");
   fill-opacity: 0;
-  animation: draw 1.2s linear forwards, fillKasperDark ease-in 1.4s forwards;
-}
-
-.letterA {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#Gradient");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.1s,
-    fillKasperDark ease-in 1.4s forwards 0.1s;
-}
-
-.letterS {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#Gradient");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.2s,
-    fillKasperDark ease-in 1.4s forwards 0.2s;
-}
-
-.letterP {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#Gradient");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.3s,
-    fillKasperDark ease-in 1.4s forwards 0.3s;
-}
-
-.letterE {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#Gradient");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.4s,
-    fillKasperDark ease-in 1.4s forwards 0.4s;
-}
-
-.letterR {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#Gradient");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.5s,
-    fillKasperDark ease-in 1.4s forwards 0.5s;
-}
-
-.letterL {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#Gradient");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.6s,
-    fillKasperDark ease-in 1.4s forwards 0.6s;
-}
-
-.letterU {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#Gradient");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.7s,
-    fillKasperDark ease-in 1.4s forwards 0.7s;
-}
-
-.letterN {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#Gradient");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.8s,
-    fillKasperDark ease-in 1.4s forwards 0.8s;
-}
-
-.letterATwo {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#Gradient");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.9s,
-    fillKasperDark ease-in 1.4s forwards 0.9s;
+  animation: draw 1.2s linear forwards, fillPath ease-in 1s forwards;
+  animation-delay: calc(var(--order) * 110ms);
 }
 
 .boxStuff {
@@ -102,7 +13,9 @@
   stroke-dashoffset: 2900;
   stroke-width: 2px;
   fill: url("#Gradient");
-  animation: draw 2.4s linear forwards, fillKasperDark ease-in 2.5s forwards;
+  fill-opacity: 0;
+  animation: draw 1s linear forwards, fillPath ease-in 1s forwards;
+  animation-delay: calc(var(--order) * 230ms);
 }
 
 .mobileBoxStuff {
@@ -110,7 +23,8 @@
   stroke-dashoffset: 5000;
   stroke-width: 2px;
   fill: url("#Gradient");
-  animation: draw 2.4s linear forwards, fillKasperDark ease-in 2.5s forwards;
+  fill-opacity: 0;
+  animation: draw 2.4s linear forwards, fillPath ease-in 2.4s forwards;
 }
 
 @keyframes draw {
@@ -119,7 +33,7 @@
   }
 }
 
-@keyframes fillKasperDark {
+@keyframes fillPath {
   0% {
     fill-opacity: 0;
   }
@@ -133,103 +47,14 @@
   }
 }
 
-.letterKLight {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 900;
+.lettersLight {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
   stroke-width: 2px;
   fill: url("#GradientLight");
   fill-opacity: 0;
-  animation: draw 1.2s linear forwards, fillKasperLight ease-in 1.4s forwards;
-}
-
-.letterALight {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#GradientLight");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.1s,
-    fillKasperLight ease-in 1.4s forwards 0.1s;
-}
-
-.letterSLight {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#GradientLight");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.2s,
-    fillKasperLight ease-in 1.4s forwards 0.2s;
-}
-
-.letterPLight {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#GradientLight");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.3s,
-    fillKasperLight ease-in 1.4s forwards 0.3s;
-}
-
-.letterELight {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#GradientLight");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.4s,
-    fillKasperLight ease-in 1.4s forwards 0.4s;
-}
-
-.letterRLight {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#GradientLight");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.5s,
-    fillKasperLight ease-in 1.4s forwards 0.5s;
-}
-
-.letterLLight {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#GradientLight");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.6s,
-    fillKasperLight ease-in 1.4s forwards 0.6s;
-}
-
-.letterULight {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#GradientLight");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.7s,
-    fillKasperLight ease-in 1.4s forwards 0.7s;
-}
-
-.letterNLight {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#GradientLight");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.8s,
-    fillKasperLight ease-in 1.4s forwards 0.8s;
-}
-
-.letterATwoLight {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  stroke-width: 2px;
-  fill: url("#GradientLight");
-  fill-opacity: 0;
-  animation: draw 1.2s linear forwards 0.9s,
-    fillKasperLight ease-in 1.4s forwards 0.9s;
+  animation: draw 1.2s linear forwards, fillPathLight ease-in 1s forwards;
+  animation-delay: calc(var(--order) * 120ms);
 }
 
 .boxStuffLight {
@@ -237,7 +62,9 @@
   stroke-dashoffset: 2900;
   stroke-width: 2px;
   fill: url("#GradientLight");
-  animation: draw 2.4s linear forwards, fillKasperLight ease-in 2.5s forwards;
+  fill-opacity: 0;
+  animation: draw 1s linear forwards, fillPathLight ease-in 1s forwards;
+  animation-delay: calc(var(--order) * 230ms);
 }
 
 .mobileBoxStuffLight {
@@ -245,10 +72,11 @@
   stroke-dashoffset: 5000;
   stroke-width: 2px;
   fill: url("#GradientLight");
-  animation: draw 2.4s linear forwards, fillKasperLight ease-in 2.5s forwards;
+  fill-opacity: 0;
+  animation: draw 2.4s linear forwards, fillPathLight ease-in 2.4s forwards;
 }
 
-@keyframes fillKasperLight {
+@keyframes fillPathLight {
   0% {
     fill-opacity: 0;
   }
