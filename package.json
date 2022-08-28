@@ -12,12 +12,13 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
-    "@babel/core": "^7.18.10",
-    "@chakra-ui/icons": "^2.0.8",
-    "@chakra-ui/react": "^2.2.8",
-    "@chakra-ui/styled-system": "^2.2.7",
-    "@chakra-ui/system": "^2.2.6",
+    "@babel/core": "^7.18.13",
+    "@chakra-ui/icons": "^2.0.9",
+    "@chakra-ui/react": "^2.2.9",
+    "@chakra-ui/styled-system": "^2.2.8",
+    "@chakra-ui/system": "^2.2.7",
     "@emotion/react": "^11.10.0",
+    "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "framer-motion": "^7.2.0",
     "next": "12.2.5",

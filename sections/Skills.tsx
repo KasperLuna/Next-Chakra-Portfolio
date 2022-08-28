@@ -200,9 +200,9 @@ function SkillGroup({ title, array }: SkilGroupProps) {
                         {title}
                     </Text>
                     <Wrap justify="center" spacing="30px">
-                        {array.map((skill) => {
+                        {array.map((skill, index) => {
                             return (
-                                <Link href={skill.link} target="_blank">
+                                <Link key={index} href={skill.link} target="_blank">
                                     <SkillIcon
                                         title={skill.title}
                                         icon={skill.icon}
