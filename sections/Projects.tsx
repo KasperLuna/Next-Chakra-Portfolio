@@ -193,7 +193,7 @@ const ProjectList = [
     Tag: "Finance Tracker",
     image: <FundsLogo />,
     description:
-      "An ongoing project currently using Next.js with Firebase for backend operations and Mantine for styling. Meant to satisfy my own needs for a personal finance tracker, it is a work in progress.",
+      "An ongoing project currently using Next.js with Firebase for backend operations and Mantine for styling. Meant to satisfy my own needs for a personal finance tracker",
     gitLink: "https://github.com/KasperLuna/Funds",
     openIcon: ExternalLinkIcon,
     openToolTip: "Open in new tab",
