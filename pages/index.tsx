@@ -12,6 +12,10 @@ import { useRef } from 'react'
 import ScrollToTopButton from '../components/ScrollToTopButton'
 import Footer from '../sections/Footer'
 
+export const config = {
+  unstable_runtineJS: false,
+}
+
 const Home: NextPage = () => {
   const heroRef = useRef(null);
   const footerRef = useRef(null);
