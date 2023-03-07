@@ -3,11 +3,6 @@ import Head from "next/head";
 import ColorToggleButton from "../components/ColorToggleButton";
 import Hero from "../sections/Hero";
 import TopNav from "../sections/TopNav";
-// import About from "../sections/About";
-// import Skills from "../sections/Skills";
-// import Projects from "../sections/Projects";
-// import Contact from "../sections/Contact";
-// import Footer from "../sections/Footer";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import ScrollToTopButton from "../components/ScrollToTopButton";
@@ -22,8 +17,15 @@ const Footer = dynamic(() => import("../sections/Footer"));
 
 const Home: NextPage = () => {
   const heroRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
   const footerRef = useRef(null);
   const visibleHero = useInView(heroRef, { margin: "-300px" });
+  const visibleSkills = useInView(skillsRef, { margin: "-200px", once: true });
+  const visibleProjects = useInView(projectsRef, {
+    margin: "-100px",
+    once: true,
+  });
   const visibleFooter = useInView(footerRef, { margin: "-30px" });
   return (
     <>
@@ -42,9 +44,11 @@ const Home: NextPage = () => {
         <Hero />
       </div>
       <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <div ref={skillsRef}>
+        <Skills />
+      </div>
+      <div ref={projectsRef}>{visibleSkills && <Projects />}</div>
+      {visibleProjects && <Contact />}
       <div ref={footerRef}>
         <Footer />
       </div>
