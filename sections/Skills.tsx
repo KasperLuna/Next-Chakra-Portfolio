@@ -8,6 +8,7 @@ import {
   Wrap,
   VStack,
   Link,
+  WrapItem,
 } from "@chakra-ui/react";
 import { m } from "framer-motion";
 
@@ -183,7 +184,9 @@ function SkillIcon(props: SkillProps) {
       label={props.title}
       aria-label={`Tooltip for ${props.title}`}
     >
-      <Box aria-label={`Icon for ${props.title}`}>{props.icon}</Box>
+      <Box role="button" aria-label={`Clickable icon for ${props.title}`}>
+        {props.icon}
+      </Box>
     </Tooltip>
   );
 }
@@ -222,11 +225,13 @@ function SkillGroup({ title, array }: SkilGroupProps) {
             {title}
           </Text>
           <Wrap justify="center" spacing="30px">
-            {array.map((skill, index) => {
+            {array.map((skill) => {
               return (
-                <Link key={skill.title} href={skill.link} target="_blank">
-                  <SkillIcon title={skill.title} icon={skill.icon} />
-                </Link>
+                <WrapItem key={skill.title}>
+                  <Link href={skill.link} target="_blank">
+                    <SkillIcon title={skill.title} icon={skill.icon} />
+                  </Link>
+                </WrapItem>
               );
             })}
           </Wrap>

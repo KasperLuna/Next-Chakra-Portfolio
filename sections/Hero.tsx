@@ -48,13 +48,15 @@ export default function Hero(): JSX.Element {
           <Box
             display={{ base: "block", md: "none" }}
             mt={-10}
-            aria-label={"KasperLuna Logo"}
+            role={"banner"}
+            aria-label={"KasperLuna Hero Banner"}
           >
             <KasperlunaStack />
           </Box>
           <Box
             display={{ base: "none", md: "block" }}
-            aria-label={"KasperLuna Logo"}
+            role={"banner"}
+            aria-label={"KasperLuna Hero Banner"}
           >
             <Kasperlunarial />
           </Box>
