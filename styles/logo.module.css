@@ -1,11 +1,11 @@
 .letters {
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
   stroke-width: 2px;
   fill: url("#Gradient");
   fill-opacity: 0;
-  animation: draw 1.2s linear forwards, fillPath ease-in 1s forwards;
-  animation-delay: calc(var(--order) * 110ms);
+  animation: draw 0.8s ease-out forwards, fillPath ease-in 0.8s forwards;
+  animation-delay: calc(var(--order) * 100ms);
 }
 
 .boxStuff {
@@ -14,8 +14,8 @@
   stroke-width: 2px;
   fill: url("#Gradient");
   fill-opacity: 0;
-  animation: draw 1s linear forwards, fillPath ease-in 1s forwards;
-  animation-delay: calc(var(--order) * 230ms);
+  animation: draw 0.8s ease-out forwards, fillPath ease-in 0.8s forwards;
+  animation-delay: calc(var(--order) * 150ms);
 }
 
 .mobileBoxStuff {
@@ -24,7 +24,7 @@
   stroke-width: 2px;
   fill: url("#Gradient");
   fill-opacity: 0;
-  animation: draw 2.4s linear forwards, fillPath ease-in 2.4s forwards;
+  animation: draw 2s ease-out forwards, fillPath ease-in 2s forwards;
 }
 
 @keyframes draw {
@@ -48,12 +48,12 @@
 }
 
 .lettersLight {
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
   stroke-width: 2px;
   fill: url("#GradientLight");
   fill-opacity: 0;
-  animation: draw 1.2s linear forwards, fillPathLight ease-in 1s forwards;
+  animation: draw 0.8s ease-out forwards, fillPathLight ease-in 0.8s forwards;
   animation-delay: calc(var(--order) * 120ms);
 }
 
@@ -63,8 +63,8 @@
   stroke-width: 2px;
   fill: url("#GradientLight");
   fill-opacity: 0;
-  animation: draw 1s linear forwards, fillPathLight ease-in 1s forwards;
-  animation-delay: calc(var(--order) * 230ms);
+  animation: draw 0.8s ease-out forwards, fillPathLight ease-in 0.8s forwards;
+  animation-delay: calc(var(--order) * 150ms);
 }
 
 .mobileBoxStuffLight {
@@ -73,7 +73,7 @@
   stroke-width: 2px;
   fill: url("#GradientLight");
   fill-opacity: 0;
-  animation: draw 2.4s linear forwards, fillPathLight ease-in 2.4s forwards;
+  animation: draw 2s ease-out forwards, fillPathLight ease-in 2s forwards;
 }
 
 @keyframes fillPathLight {

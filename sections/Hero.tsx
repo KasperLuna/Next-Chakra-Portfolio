@@ -65,7 +65,7 @@ export default function Hero(): JSX.Element {
               animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1, duration: 0.8, ease: "easeIn" },
+                transition: { delay: 0.8, duration: 0.5, ease: "easeIn" },
               }}
             >
               {"Software Engineer"}
@@ -76,7 +76,7 @@ export default function Hero(): JSX.Element {
               animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1.1, duration: 0.8, ease: "easeIn" },
+                transition: { delay: 1, duration: 0.5, ease: "easeIn" },
               }}
             >
               {
@@ -89,7 +89,7 @@ export default function Hero(): JSX.Element {
               animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1.4, duration: 0.8, ease: "easeIn" },
+                transition: { delay: 1.2, duration: 0.5, ease: "easeIn" },
               }}
             >
               <Button
