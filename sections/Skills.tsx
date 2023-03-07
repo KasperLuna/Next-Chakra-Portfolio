@@ -22,7 +22,7 @@ import {
   SiExpress,
   SiNestjs,
   SiNextdotjs,
-  SiMaterialui,
+  SiMui,
   SiChakraui,
   SiMicrosoftazure,
   SiNetlify,
@@ -64,7 +64,7 @@ const FrontendSkills = [
   },
   {
     title: "Material UI (MUI)",
-    icon: <SiMaterialui color={"#007fff"} size={60} />,
+    icon: <SiMui color={"#007fff"} size={60} />,
     link: "https://mui.com",
   },
   {
@@ -80,14 +80,26 @@ const BackendSkills = [
     icon: <FaNode color={"#23b45d"} size={60} />,
     link: "https://nodejs.org/en/",
   },
-  { title: "Express.js", icon: <SiExpress size={60} />, link: "https://expressjs.com" },
+  {
+    title: "Express.js",
+    icon: <SiExpress size={60} />,
+    link: "https://expressjs.com",
+  },
   {
     title: "Nest.js",
     icon: <SiNestjs color={"#e1244e"} size={60} />,
     link: "https://nestjs.com",
   },
-  { title: "PHP", icon: <SiPhp color={"#787cb4"} size={60} />, link: "https://www.php.net" },
-  { title: "Redis", icon: <SiRedis color={"#d82c20"} size={60} />, link: "https://redis.io" },
+  {
+    title: "PHP",
+    icon: <SiPhp color={"#787cb4"} size={60} />,
+    link: "https://www.php.net",
+  },
+  {
+    title: "Redis",
+    icon: <SiRedis color={"#d82c20"} size={60} />,
+    link: "https://redis.io",
+  },
   {
     title: "PostgreSQL",
     icon: <SiPostgresql color={"#336791"} size={60} />,
@@ -102,7 +114,7 @@ const BackendSkills = [
     title: "Firebase",
     icon: <SiFirebase color={"#4db33d"} size={60} />,
     link: "https://firebase.google.com",
-  }
+  },
 ];
 
 const DeploymentSkills = [
@@ -111,7 +123,11 @@ const DeploymentSkills = [
     icon: <FaGitAlt color={"#f05033"} size={60} />,
     link: "https://git-scm.com",
   },
-  { title: "Github", icon: <AiOutlineGithub size={60} />, link: "https://github.com" },
+  {
+    title: "Github",
+    icon: <AiOutlineGithub size={60} />,
+    link: "https://github.com",
+  },
   {
     title: "Microsoft Azure",
     icon: <SiMicrosoftazure color={"#008ad7"} size={60} />,
@@ -158,7 +174,7 @@ type SkillProps = {
   title: string;
   icon: JSX.Element;
   link?: string;
-}
+};
 
 function SkillIcon(props: SkillProps) {
   return (
@@ -175,7 +191,7 @@ function SkillIcon(props: SkillProps) {
 type SkilGroupProps = {
   title: string;
   array: SkillProps[];
-}
+};
 
 function SkillGroup({ title, array }: SkilGroupProps) {
   return (
@@ -208,13 +224,9 @@ function SkillGroup({ title, array }: SkilGroupProps) {
           <Wrap justify="center" spacing="30px">
             {array.map((skill, index) => {
               return (
-                <Link key={index} href={skill.link} target="_blank">
-                  <SkillIcon
-                    title={skill.title}
-                    icon={skill.icon}
-                  />
+                <Link key={skill.title} href={skill.link} target="_blank">
+                  <SkillIcon title={skill.title} icon={skill.icon} />
                 </Link>
-
               );
             })}
           </Wrap>
@@ -246,7 +258,7 @@ export default function Skills() {
       {AllSkills.map((group, index) => {
         return (
           <SkillGroup
-            key={index}
+            key={group.title}
             title={group.title}
             array={group.array}
           />

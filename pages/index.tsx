@@ -1,16 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import ColorToggleButton from '../components/ColorToggleButton'
-import Hero from '../sections/Hero'
-import TopNav from '../sections/TopNav'
-import About from '../sections/About'
-import Skills from '../sections/Skills'
-import Projects from '../sections/Projects'
-import Contact from '../sections/Contact'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
-import ScrollToTopButton from '../components/ScrollToTopButton'
-import Footer from '../sections/Footer'
+import type { NextPage } from "next";
+import Head from "next/head";
+import ColorToggleButton from "../components/ColorToggleButton";
+import Hero from "../sections/Hero";
+import TopNav from "../sections/TopNav";
+import About from "../sections/About";
+import Skills from "../sections/Skills";
+import Projects from "../sections/Projects";
+import Contact from "../sections/Contact";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import ScrollToTopButton from "../components/ScrollToTopButton";
+import Footer from "../sections/Footer";
 
 const Home: NextPage = () => {
   const heroRef = useRef(null);
@@ -30,15 +30,19 @@ const Home: NextPage = () => {
 
       <TopNav />
       <ColorToggleButton />
-      <div ref={heroRef}> <Hero /></div>
+      <div ref={heroRef}>
+        <Hero />
+      </div>
       <About />
       <Skills />
       <Projects />
       <Contact />
-      <div ref={footerRef}><Footer /></div>
+      <div ref={footerRef}>
+        <Footer />
+      </div>
       <ScrollToTopButton visible={visibleHero} bottomDesktop={visibleFooter} />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
