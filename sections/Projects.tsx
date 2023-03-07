@@ -11,7 +11,7 @@ import {
   Wrap,
   Icon,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { FaGithub, FaTooth } from "react-icons/fa";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -90,7 +90,7 @@ type ProjectWrapperProps = {
 
 function ProjectWrapper(props: ProjectWrapperProps) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0.4, y: -35, rotateZ: -1 }}
       whileInView={{
         opacity: 1,
@@ -147,7 +147,7 @@ function ProjectWrapper(props: ProjectWrapperProps) {
           </Stack>
         </VStack>
       </Box>
-    </motion.div>
+    </m.div>
   );
 }
 

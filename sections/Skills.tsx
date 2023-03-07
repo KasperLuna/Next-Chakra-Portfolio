@@ -9,7 +9,7 @@ import {
   VStack,
   Link,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 import { AiFillHtml5, AiOutlineGithub } from "react-icons/ai";
 import { DiCss3, DiGoogleCloudPlatform } from "react-icons/di";
@@ -195,7 +195,7 @@ type SkilGroupProps = {
 
 function SkillGroup({ title, array }: SkilGroupProps) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{
         opacity: 1,
@@ -232,7 +232,7 @@ function SkillGroup({ title, array }: SkilGroupProps) {
           </Wrap>
         </Stack>
       </Box>
-    </motion.div>
+    </m.div>
   );
 }
 

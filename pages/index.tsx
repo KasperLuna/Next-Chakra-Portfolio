@@ -3,14 +3,22 @@ import Head from "next/head";
 import ColorToggleButton from "../components/ColorToggleButton";
 import Hero from "../sections/Hero";
 import TopNav from "../sections/TopNav";
-import About from "../sections/About";
-import Skills from "../sections/Skills";
-import Projects from "../sections/Projects";
-import Contact from "../sections/Contact";
+// import About from "../sections/About";
+// import Skills from "../sections/Skills";
+// import Projects from "../sections/Projects";
+// import Contact from "../sections/Contact";
+// import Footer from "../sections/Footer";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-import Footer from "../sections/Footer";
+
+import dynamic from "next/dynamic";
+
+const About = dynamic(() => import("../sections/About"));
+const Skills = dynamic(() => import("../sections/Skills"));
+const Projects = dynamic(() => import("../sections/Projects"));
+const Contact = dynamic(() => import("../sections/Contact"));
+const Footer = dynamic(() => import("../sections/Footer"));
 
 const Home: NextPage = () => {
   const heroRef = useRef(null);
